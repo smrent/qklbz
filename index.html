@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="livequery,jquery" />
+<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
+<title>水木租房</title>
+<link rel="stylesheet" type="text/css" href="main.css" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<style type="text/css">
+#more{margin:0px auto;width: 360px;  }/*border: 1px solid #999;*/           
+.single_item{padding: 20px; border-bottom: 1px dotted #d3d3d3;}
+.author{position: absolute; left: 0px; font-weight:bold; color:#39f}
+.date{position: absolute; right: 0px; color:#999}
+.content{float:right;width:180px; height:20px;line-height:20px; font-weight:bold;word-break: break-all;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;}
+.cover_img{margin-left:0px;width:120px;height:90px;}
+/*海淀 整租 二室*/
+.district_head{float:right;width:180px;position: relative; height: 20px;margin-top:-45px;}
+.district{position: absolute; left: 0px; font-weight:bold; color:#39f;font:12px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif;}
+.room_type{position: absolute; left: 50px;; color:#999;font:12px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif;}
+.area{position: absolute; left: 80px; color:#999;font:12px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif;}
+.rent_type{position: absolute; right: 0px; color:#999;font:12px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif;}
+
+
+.view_head{float:right;width:180px;position: relative; height: 10px;margin-top:-20px;}
+.view{position: absolute; left: 15px;  color:#999;font:12px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif;}
+.want{position: absolute; left: 85px; color:#999;font:12px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif;}
+.price{position: absolute; right: 20px; color:#f00}
+
+/*
+.foot{
+   position:fixed; bottom:0;left:0; width:100%; background:#666;
+}*/
+
+/*.element_head{width: 100%; position: relative; height: 20px;}*/
+.get_more{margin:10px; text-align:center}
+.more_loader_spinner{width:20px; height:20px; margin:10px auto; background: url(loader.gif) no-repeat;}
+</style>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.more.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#more').more({'address': 'data.php'})
+	//alert('111');
+});
+</script>
+</head>
+
+<body>
+<!--
+<div id="header">
+   <div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>
+</div>
+-->
+
+<div id="main">
+	<div style="position:fixed;top:0px;width:100%; height: 40px; background: #fff;z-index:100;filter:alpha(Opacity=100);-moz-opacity:1;opacity: 1">
+	  <h2 class="top_title">
+	  	<!--<a href="http://www.helloweba.com/view-blog-130.html">水木租房</a>-->
+	    <img style="position: absolute; left: 30px;top: 20px;width:20px;height:20px;" border="0" src="pic/find.jpg">	
+	    <img style="margin-left:0px;width:100px;height:40px;vertical-align:middle;" border="0" src="logo.jpg">	
+	    <img style="position: absolute; right: 70px;top: 20px;height:20px;" border="0" src="pic/post.jpg">	
+	  </h2>
+	  <!--<p style="margin:20px">提示：点击列表下的链接可以加载更多内容</p>-->
+	</div>
+	<br><br>
+  <div id="more">
+        <div class="single_item" ><!--onclick="alert(this.innerHTML);"-->
+        		 	<!--
+             	<div class="element_head">
+                  <div class="date"></div>
+                  <div class="author"></div>
+              </div>
+              
+              <img style="margin-left:0px;width:120px;height:90px;" id="img" border="0" src="1.png">	
+              -->
+              <img class="cover_img">
+              <div class="content"></div>
+							<div class="district_head">
+                  <div class="district"></div>
+                  <div class="room_type"></div>
+                  <div class="area"></div><a style="position: absolute; left:95px; color:#999;font:12px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif;">m²</a>
+                  <div class="rent_type"></div>
+                  
+              </div>
+              
+              <div class="view_head">
+	              <img style="width:15px;height:15px;position:absolute;left:0px;" id="img" border="0" src="pic/view.jpg">
+              	<div class="view"></div>
+              	<img style="width:15px;height:15px;position: absolute; left:70px;" id="img" border="0" src="pic/want.jpg">
+              	<div class="want"></div>
+	              <div class="price"></div><a style="position: absolute; right: 0px; color:#f00">/月</a>
+              </div>
+              
+            
+              	
+            
+              <!--<div class="table_id"></div>-->
+              
+        </div>
+        <a href="javascript:;" class="get_more">::more::</a>
+  </div> 
+  <br />
+<br />
+<br />
+
+</div>
+
+<div id="foot" style="width:380px;height:50px;position:fixed;bottom:0px;left:0px;background: #fff;z-index:100;filter:alpha(Opacity=100);-moz-opacity:1;opacity: 1;border-top:1px solid #d3d3d3;">
+		<table border="0" align="center" style="margin-left:0px;width:100%;">
+		  <tr align="center">
+		    <th><img style="margin-left:0px;width:20px;height:20px;vertical-align:middle;" border="0" src="pic/chuzu-active.jpg"></th>
+		    <th><img style="margin-left:0px;width:20px;height:20px;vertical-align:middle;" border="0" src="pic/qiuzu.jpg"></th>
+		    <th><img style="margin-left:0px;width:20px;height:20px;vertical-align:middle;" border="0" src="pic/wode.jpg"></th>
+		    <th><img style="margin-left:0px;width:20px;height:20px;vertical-align:middle;" border="0" src="pic/yanzheng.jpg"></th>
+		  </tr>
+		  <tr align="center">
+		    <td><a>出租</a></td>
+		    <td><a style="color:#999">求租</a></td>
+		    <td><a style="color:#999">我的</a></td>
+		    <td><a style="color:#999">验证</a></td>
+		  </tr>
+		</table>
+</div>
+
+<div id="footer">
+</div>
+
+<!--
+<div id="footer">
+    <p>Powered by helloweba.com  允许转载、修改和使用本站的DEMO，但请注明出处：<a href="http://www.helloweba.com">www.helloweba.com</a></p>
+</div>
+
+<p id="stat"><script type="text/javascript" src="http://js.tongji.linezing.com/1870888/tongji.js"></script></p>
+-->
+</body>
+</html>
