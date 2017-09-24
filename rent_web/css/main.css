@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+ul li {
+    display: inline-block;
+}
+img{
+    /*height:100%;*/
+    width:100%;
+}
+a,a:visited,a:link,a:focus,a:hover{
+    text-decoration: none;
+    display: inline-block;
+    color: #1fa563;
+}
+.body{
+    width:100%;
+    margin:25% 0;
+}
+
+header{
+    overflow: hidden;
+    position: fixed;
+    width:100%;
+    top:0;
+    background-color: white;
+}
+.nav-btn{
+    float: left;
+
+}
+.nav-btn a{
+    padding:10px;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+.nav-search{
+    width: 18%;
+    text-align: center;
+}
+.nav-publish{
+    width: 18%;
+    text-align: center;
+}
+
+.nav-logo{
+    width: 64%;
+    text-align: center;
+}
+/*footer*/
+footer{
+    overflow: hidden;
+    position: fixed;
+    width:100%;
+    bottom:0;
+    background-color: white;
+}
+.label{
+    text-align: center;
+}
+.fo-nav{
+    width:25%;
+    text-align: center;
+}
+.pic-wrapper{
+    width: 30%;
+}
+/*body*/
+div .content-box{
+    overflow: hidden;
+    color:black;
+}
+.content-box:hover,content-box:active{
+    background-color: gainsboro;
+}
+.content-wrapper{
+    width:67%;
+    height: 100%;
+    padding-left: 3%;
+}
+.text-red{
+    color: red;
+}
+.abstract,.state{
+    padding:5% 0;
+}
+.abstract ul li,.state ul li{
+    padding:5px;
+}
+a.active{
+    color:dodgerblue;
+}
