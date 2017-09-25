@@ -1,0 +1,83 @@
+
+.return{
+    display: inline-block;
+    line-height: 20px;
+    font-size: 2em;
+}
+
+.nav-return{
+    width: 100%;
+    margin-top: 1%;
+}
+
+div.body{
+    margin-top: 15%;
+}
+.owner-info{
+    overflow: hidden;
+    margin-top: 15px;
+}
+.room-desc{
+    padding-left: 3%;
+    width:65%;
+}
+.room-desc,.pic-wrapper{
+    display: inline-block;
+    float: left;
+}
+.pic-wrapper{
+    text-align: center;
+    position: relative;
+}
+.pic-number{
+    position: absolute;
+    bottom:3px;
+    right:3px;
+    color:white;
+}
+.verify{
+    color:#2991f7;
+    border:1px solid #2991f7;
+    border-radius: 3px 3px ;
+    display: inline-block;
+    padding:2px;
+}
+.none-verify{
+    color: #f74848;
+    display: inline-block;
+    padding:2px;
+}
+/*rommer*/
+.roomer-want{
+    display: block;
+    width: 98%;
+    text-align: center;
+    padding:3px;
+    color:#999;
+    margin-bottom: 15px;
+}
+.roomer-want div,.roomer-want a{
+    display: inline-block;
+    margin:auto;
+}
+.roomer-want a{
+    border:1px solid gray;
+    background-color: aquamarine;
+    border-radius: 3px 3px ;
+    color:#111111;
+}
+.roomer-info{
+    overflow: hidden;
+}
+.roomer-info div{
+    padding:2px;
+    margin: 2px;
+}
+
+/*star*/
+.star{
+    display: inline-block;
+}
+.star-box{
+    float: left;
+}
