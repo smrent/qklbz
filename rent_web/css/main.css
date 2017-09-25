@@ -13,13 +13,18 @@ img{
 a,a:visited,a:link,a:focus,a:hover{
     text-decoration: none;
     display: inline-block;
-    color: #1fa563;
+    color: #999;
 }
-.body{
-    width: 98%;
-    margin: 18% 0 15% 2%;
+hr{
+    border:1px #f3ebeb solid;
 }
-
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align:right;
+}
+/*------------------------------header-----------------------*/
 header{
     overflow: hidden;
     position: fixed;
@@ -40,13 +45,11 @@ header{
 .float-left{
     float: left;
 }
-.nav-search{
+
+.nav-publish,.nav-search{
     width: 18%;
     text-align: center;
-}
-.nav-publish{
-    width: 18%;
-    text-align: center;
+    margin-top: 2%;
 }
 
 .nav-logo{
@@ -54,7 +57,7 @@ header{
 	margin:0 12%;
     text-align: center;
 }
-/*footer*/
+/*---------------------------footer-------------------------*/
 footer{
     overflow: hidden;
     position: fixed;
@@ -69,13 +72,17 @@ footer{
     width:25%;
     text-align: center;
 }
-.fo-nav a{
+.nav-btn a{
 	font-size:10px;
 }
 .pic-wrapper{
     width: 30%;
 }
-/*body*/
+/*-----------------------body--------------------------*/
+.body{
+    width: 98%;
+    margin: 18% 0 15% 2%;
+}
 div .content-box{
     overflow: hidden;
     color:black;
@@ -92,11 +99,21 @@ div .content-box{
     color: red;
 }
 .abstract,.state{
-    padding:5% 0;
+    padding:2% 0;
 }
 .abstract ul li,.state ul li{
-    padding:5px;
+    width: 30%;
+    padding:2% 0;
 }
 a.active{
-    color:dodgerblue;
+    color:#32b550;
+}
+.room-info,.state{
+    color:#7a7777;
+}
+#district{
+    color:#3f98ff;
+}
+#price{
+    color:red;
 }
