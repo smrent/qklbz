@@ -1,0 +1,21 @@
+.verify{
+    color:#2991f7;
+    border:1px solid #2991f7;
+    border-radius: 3px 3px ;
+    display: inline-block;
+    padding:2px;
+}
+.none-verify{
+    color: #f74848;
+    display: inline-block;
+    padding:2px;
+}
+div.pic-wrapper {
+    text-align: center;
+}
+.fa-heart{
+    color:red;
+}
+.content-box{
+    min-height:128px;
+}
