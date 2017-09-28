@@ -81,3 +81,6 @@ div.body{
 .star-box{
     float: left;
 }
+.z-index_-1{
+    z-index:-1;
+}
