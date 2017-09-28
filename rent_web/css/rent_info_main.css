@@ -78,8 +78,10 @@ div.body{
 }
 
 /*star*/
-.star{
+div.star{
     display: inline-block;
+    margin: 0;
+    padding:0;
 }
 .star-box {
     float: left;
