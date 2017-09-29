@@ -1,0 +1,32 @@
+/*star*/
+div.star{
+    display: inline-block;
+    margin: 0;
+    padding:0;
+}
+.star-box {
+    float: left;
+}
+.info-box p{
+    color:#CCCCCC;
+}
+.info-box{
+    text-align: center;
+    width:80%;
+    margin:auto;
+
+}
+.info-form label{
+    vertical-align: top;
+}
+.info-form{
+    width:100%;
+    text-align: right;
+}
+.info-form input,.info-form textarea{
+    width:66%;
+}
+.info-form textarea{
+    margin-top: 2px;
+    border-width: 2px;
+}

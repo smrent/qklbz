@@ -27,7 +27,10 @@ div.body{
 }
 .pic-wrapper{
     text-align: center;
+}
+.pic-footer{
     position: relative;
+    z-index: -1;
 }
 .pic-number{
     position: absolute;
@@ -75,9 +78,11 @@ div.body{
 }
 
 /*star*/
-.star{
+div.star{
     display: inline-block;
+    margin: 0;
+    padding:0;
 }
-.star-box{
+.star-box {
     float: left;
 }
