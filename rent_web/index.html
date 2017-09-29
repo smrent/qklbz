@@ -7,7 +7,15 @@
     <title>水木租房</title>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet">
-
+<!--move jquery.min.js to here and add jquery.more.js-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.more.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#more').more({'address': 'php/data.php'})
+	//alert('111');
+});
+</script>
 </head>
 <body>
 
@@ -31,270 +39,47 @@
 
 <div class=" body">
     <!--租房信息-->
-    <a href="pages/rent_info.html" class="content-box">
-        <!--房间图片 float-->
-        <div class="pic-wrapper float-left">
-            <img class="room-pic" src="images/1.jpg" alt="">
+    <div id="more">
+        <div class="single_item"><!--onclick="alert(this.innerHTML);"-->
+					<a href="pages/rent_info.html" class="content-box">
+						<!--房间图片 float-->
+		        <div class="pic-wrapper float-left">
+		            <img class="room-pic" alt="">
+		        </div>
+		        <!--房源标题 float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="content"></div></h4>
+        				<!--房间属性简介 block 垂直排列-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district"></div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type"></div><div class="area"></div>m²</li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type"></div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--房源状态描述-->
+	                    <li>
+	                        <i class="fa fa-eye" aria-hidden="true"></i>
+	                        <span id="watcher"><div class="view"></div></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <spqn id="want"><div class="want"></div></spqn>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price"></div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
         </div>
-        <!--房源标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li id="district">海淀区</li>
-                    <li id="house-type" class="text-center">2室65m</li>
-                    <li id="rent-type" class="text-right">整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--房源状态描述-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span id="watcher">10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <spqn id="want">2</spqn>
-                    </li>
-                    <li id="price" class="text-right">6000/月</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="pages/rent_info.html" class="content-box">
-        <!--房间图片 float-->
-        <div class="pic-wrapper float-left">
-            <img class="room-pic" src="images/1.jpg" alt="">
-        </div>
-        <!--房源标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li id="district">海淀区</li>
-                    <li id="house-type" class="text-center">2室65m</li>
-                    <li id="rent-type" class="text-right">整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--房源状态描述-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span id="watcher">10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <spqn id="want">2</spqn>
-                    </li>
-                    <li id="price" class="text-right">6000/月</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="pages/rent_info.html" class="content-box">
-        <!--房间图片 float-->
-        <div class="pic-wrapper float-left">
-            <img class="room-pic" src="images/1.jpg" alt="">
-        </div>
-        <!--房源标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li id="district">海淀区</li>
-                    <li id="house-type" class="text-center">2室65m</li>
-                    <li id="rent-type" class="text-right">整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--房源状态描述-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span id="watcher">10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <spqn id="want">2</spqn>
-                    </li>
-                    <li id="price" class="text-right">6000/月</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="pages/rent_info.html" class="content-box">
-        <!--房间图片 float-->
-        <div class="pic-wrapper float-left">
-            <img class="room-pic" src="images/1.jpg" alt="">
-        </div>
-        <!--房源标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li id="district">海淀区</li>
-                    <li id="house-type" class="text-center">2室65m</li>
-                    <li id="rent-type" class="text-right">整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--房源状态描述-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span id="watcher">10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <spqn id="want">2</spqn>
-                    </li>
-                    <li id="price" class="text-right">6000/月</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="pages/rent_info.html" class="content-box">
-        <!--房间图片 float-->
-        <div class="pic-wrapper float-left">
-            <img class="room-pic" src="images/1.jpg" alt="">
-        </div>
-        <!--房源标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li id="district">海淀区</li>
-                    <li id="house-type" class="text-center">2室65m</li>
-                    <li id="rent-type" class="text-right">整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--房源状态描述-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span id="watcher">10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <spqn id="want">2</spqn>
-                    </li>
-                    <li id="price" class="text-right">6000/月</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="pages/rent_info.html" class="content-box">
-        <!--房间图片 float-->
-        <div class="pic-wrapper float-left">
-            <img class="room-pic" src="images/1.jpg" alt="">
-        </div>
-        <!--房源标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li id="district">海淀区</li>
-                    <li id="house-type" class="text-center">2室65m</li>
-                    <li id="rent-type" class="text-right">整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--房源状态描述-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span id="watcher">10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <spqn id="want">2</spqn>
-                    </li>
-                    <li id="price" class="text-right">6000/月</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="pages/rent_info.html" class="content-box">
-        <!--房间图片 float-->
-        <div class="pic-wrapper float-left">
-            <img class="room-pic" src="images/1.jpg" alt="">
-        </div>
-        <!--房源标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li id="district">海淀区</li>
-                    <li id="house-type" class="text-center">2室65m</li>
-                    <li id="rent-type" class="text-right">整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--房源状态描述-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span id="watcher">10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <spqn id="want">2</spqn>
-                    </li>
-                    <li id="price" class="text-right">6000/月</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="pages/rent_info.html" class="content-box">
-        <!--房间图片 float-->
-        <div class="pic-wrapper float-left">
-            <img class="room-pic" src="images/1.jpg" alt="">
-        </div>
-        <!--房源标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li id="district">海淀区</li>
-                    <li id="house-type" class="text-center">2室65m</li>
-                    <li id="rent-type" class="text-right">整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--房源状态描述-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span id="watcher">10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                        <spqn id="want">2</spqn>
-                    </li>
-                    <li id="price" class="text-right">6000/月</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
+        <a href="javascript:;" class="get_more" style="color:#007bc4/*#424242*/; text-decoration:none;outline: none;">::more::</a>
+  	</div> 
+    
+    
+
 
 </div>
 
@@ -328,6 +113,5 @@
 
 
 </footer>
-<script src="js/jquery.min.js"></script>
 </body>
 </html>
