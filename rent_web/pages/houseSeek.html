@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/houseSeek_main.css" rel="stylesheet">
-
+		<!--move jquery.min.js to here and add jquery.more.js-->
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.more.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$('#more').more({'address': '../php/houseSeek.php'})
+			//alert('111');
+		});
+		</script>
 </head>
 <body>
 
@@ -32,172 +40,44 @@
 
 <div class=" body">
     <!--求租信息-->
-    <a href="#" class="content-box">
-        <!--求租者图片 float-->
-        <div class="pic-wrapper float-left">
-            <img src="../pic_people/u179.jpg" alt="XXX">
-        </div>
-        <!--求租标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li >海淀</li>
-                    <li class="text-center">一室</li>
-                    <li class="text-right">求整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--关注人数-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span>10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                        <span>2</span>
-                    </li>
-                    <li class="text-center">13号线</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="#" class="content-box">
-        <!--求租者图片 float-->
-        <div class="pic-wrapper float-left">
-            <img src="../pic_people/u437.jpg" alt="XXX">
-        </div>
-        <!--求租标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li >海淀</li>
-                    <li class="text-center">二室</li>
-                    <li class="text-right">求整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--关注人数-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span>10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                        <span>2</span>
-                    </li>
-                    <li class="text-center">5号线</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="#" class="content-box">
-    <!--求租者图片 float-->
-    <div class="pic-wrapper float-left">
-        <img src="../pic_people/u437.jpg" alt="XXX">
-    </div>
-    <!--求租标题 float-->
-    <div class="content-wrapper float-left">
-        <h4>北七家宏福苑小区二室一厅</h4>
-        <!--房间属性简介 block 垂直排列-->
-        <div class="abstract">
-            <ul class="room-info">
-                <li >海淀</li>
-                <li class="text-center">一室</li>
-                <li class="text-right">求整租</li>
-            </ul>
-        </div>
-        <div class="state">
-            <ul class="state-info">
-                <!--关注人数-->
-                <li>
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                    <span>10</span>
-                </li>
-                <li class="text-center">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                    <span>2</span>
-                </li>
-                <li class="text-center">13号线</li>
-            </ul>
-        </div>
-    </div>
-</a>
-    <hr>
-    <a href="#" class="content-box">
-        <!--求租者图片 float-->
-        <div class="pic-wrapper float-left">
-            <img src="../pic_people/u179.jpg" alt="XXX">
-        </div>
-        <!--求租标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li >海淀</li>
-                    <li class="text-center">一室</li>
-                    <li class="text-right">求整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--关注人数-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span>10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                        <span>2</span>
-                    </li>
-                    <li class="text-center">13号线</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-    <a href="#" class="content-box">
-        <!--求租者图片 float-->
-        <div class="pic-wrapper float-left">
-            <img src="../pic_people/u179.jpg" alt="XXX">
-        </div>
-        <!--求租标题 float-->
-        <div class="content-wrapper float-left">
-            <h4>北七家宏福苑小区二室一厅</h4>
-            <!--房间属性简介 block 垂直排列-->
-            <div class="abstract">
-                <ul class="room-info">
-                    <li >海淀</li>
-                    <li class="text-center">一室</li>
-                    <li class="text-right">求整租</li>
-                </ul>
-            </div>
-            <div class="state">
-                <ul class="state-info">
-                    <!--关注人数-->
-                    <li>
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                        <span>10</span>
-                    </li>
-                    <li class="text-center">
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                        <span>2</span>
-                    </li>
-                    <li class="text-center">13号线</li>
-                </ul>
-            </div>
-        </div>
-    </a>
-    <hr>
-
+    <div id="more">
+        <div class="single_item"><!--onclick="alert(this.innerHTML);"-->
+			    <a href="#" class="content-box">
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper float-left">
+			            <img class="user_headimg" alt="XXX">
+			        </div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="content"></div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+			            <div class="abstract">
+			                <ul class="room-info">
+			                    <li id="district"><div class="district"></div></li>
+			                    <li class="text-center"><div class="room_type"></div></li>
+			                    <li class="text-right"><div class="rent_type"></div></li>
+			                </ul>
+			            </div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-eye" aria-hidden="true"></i>
+			                        <span><div class="view"></div></span>
+			                    </li>
+			                    <li class="text-center">
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                    <li class="text-center"><div class="subway"></div></li>
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div>
+			  <a href="javascript:;" class="get_more" style="color:#007bc4/*#424242*/; text-decoration:none;outline: none;">::more::</a>
+		</div>
 
 </div>
 
@@ -232,6 +112,5 @@
 
 
 </footer>
-<script src="js/jquery.min.js"></script>
 </body>
 </html>
