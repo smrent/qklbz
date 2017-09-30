@@ -56,3 +56,9 @@ a.blog-link{
 .wrapper{
     text-align: center;
 }
+.roomer-info .pic-wrapper{
+    float: none;
+}
+.roomer-info {
+    text-align: center;
+}
