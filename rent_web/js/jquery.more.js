@@ -70,7 +70,7 @@
                     $.each(this, function(key, value){
                     	  if(t.find('.'+key)) {
                     	  	
-                    	  	if(key == 'room-pic'){
+                    	  	if(key == 'room-pic' || key == 'user_headimg'){
                     	  		//alert(key);
 	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('src',value);
 	                    	  }else{
