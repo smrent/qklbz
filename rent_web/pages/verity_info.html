@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>水木租房-验证</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>水木租房-我的信息</title>
     <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link href="../css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/my_info_main.css">
     <link rel="stylesheet" href="../css/rent_info_main.css">
-    <link rel="stylesheet" href="../css/houseSeek_main.css">
-
+    <link rel="stylesheet" href="../css/verity_info_main.css">
+    <!--<link rel="stylesheet" href="../css/my_info_main.css">-->
+    <!--<link rel="stylesheet" href="../css/rent_info_main.css">-->
+    <!--<link rel="stylesheet" href="../css/houseSeek_main.css">-->
 </head>
 <body>
-
 <header>
     <!--搜索链接跳转-->
     <div class="nav-btn nav-search">
@@ -37,37 +39,33 @@
     <div class="roomer-info">
         <div class="pic-wrapper ">
             <img src="../pic_people/owner1.jpg" alt="XXX">
-            <div class="verify"><i class="fa fa-user-o"></i>已实名</div>
+            <div class="none-verify"><i class="fa fa-user-o"></i>未实名</div>
         </div>
         <div class="star-box smID">
             <small>水木社区ID：</small>
             <small class="smID">穷挫矮</small>
         </div>
-        <div class="star-box">
-            <small>信息完整度：</small>
-            <div class="star "><i class="fa fa-star"></i></div>
-            <div class="star "><i class="fa fa-star"></i></div>
-            <div class="star "><i class="fa fa-star-half-o"></i></div>
-            <div class="star "><i class="fa fa-star-o"></i></div>
-            <div class="star "><i class="fa fa-star-o"></i></div>
-        </div>
     </div>
-    <hr>
-    <div class="info-box">
-        <h3>优先推荐</h3>
-        <p>个人信息完整度高的租房需求</p>
-        <form class="info-form" action="submit">
-            <label for="weixin">微信号:</label>
-            <input id="weixin" placeholder="常用微信号（或QQ号）" type="number"><br>
-            <label for="smID">水木ID:</label>
-            <input id="smID" placeholder="水木社区ID" type="number"><br>
-            <label for="university">毕业学校:</label>
-            <input id="university" placeholder="如：清华大学" type="number"><br>
-            <label for="creer">从事行业:</label>
-            <input id="creer" placeholder="如：人工智能" type="text"><br>
-            <label for="expectation">你的期望:</label>
-            <textarea name="expectation" id="expectation" cols="20" rows="10" placeholder="对室友或租户的期望..." ></textarea>
+    <div class="info">
+        需输入您的常用手机号
+    </div>
+    <div class="wrapper">
+        <form action="submit">
+            <label for="phone_number">手机号：</label>
+            <input type="text" class="phone-number" id="phone_number" placeholder="一经填写，半年内不可更改！">
+            <input type="submit" class="btn-primary" value="确定">
         </form>
+    </div>
+    <div class="alert">
+        <img src="../images/alert.jpg" alt="温馨提示">
+    </div>
+    <div class="alert-box">
+        <p>只有进行了验证，才能发布出租求租信息。</p>
+        <p>只有进行了验证，才能使用想租和关注功能。</p>
+        <p>只有进行了验证，才能查看联系方式等信息。</p>
+        <p>如果发现您的信息被泄露给中介，请向我们举报！</p>
+        <p>举报方式1：给微信公众号“水木租房”留言。</p>
+        <p>举报方式2：给微博“<a class="blog-link">水木租房</a>”发消息。</p>
     </div>
 </div>
 
@@ -87,15 +85,16 @@
             <div class="label">求租</div>
         </a>
     </div>
-    <!--我的页面,当前页面(已激活)-->
+
     <div class="nav-btn fo-nav">
-        <a href="#" class="active">
+        <a href="my_info.html" class="">
             <i class="fa fa-user-circle fa-2x  " aria-hidden="true"></i>
             <div class="label">我的</div>
         </a>
     </div>
+    <!--验证页面,当前页面(已激活)-->
     <div class="nav-btn fo-nav">
-        <a href="verity_info.html" class="">
+        <a href="#" class="active">
             <i class="fa fa-key fa-2x  " aria-hidden="true"></i>
             <div class="label">验证</div>
         </a>
