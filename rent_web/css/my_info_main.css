@@ -30,3 +30,14 @@ div.star{
     margin-top: 2px;
     border-width: 2px;
 }
+.shortcut-btn{
+    float: left;
+    width:50%;
+    text-align: center;
+}
+.shortcut-btn a{
+    padding:10px;
+}
+.body{
+    overflow: hidden;
+}
