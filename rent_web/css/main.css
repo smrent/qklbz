@@ -117,6 +117,12 @@ a.active{
 #price{
     color:red;
 }
+.room_type{
+    display: inline-block;
+}
+.area{
+    display: inline-block;
+}
 /*James add for infinite loading*/
 #more{margin:0px auto;}/*border: 1px solid #999;*/ 
 .get_more{margin:10px; text-align:center}
