@@ -86,3 +86,9 @@ div.star{
 .star-box {
     float: left;
 }
+.room_type{
+    display: inline-block;
+}
+.area{
+    display: inline-block;
+}
