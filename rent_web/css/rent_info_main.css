@@ -72,7 +72,7 @@ div.body{
 .roomer-info{
     overflow: hidden;
 }
-.roomer-info div{
+.roomer-info>div{
     padding:2px;
     margin: 2px;
 }

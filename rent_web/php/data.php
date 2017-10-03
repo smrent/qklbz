@@ -16,10 +16,10 @@ $user = array('demo1','demo2','demo3','demo3','demo4');
 //$rs0=mysql_query("select max(ID) from pic_sheji");
 //$maxid = mysql_fetch_array($rs0);
 
-$query=mysql_query("select * from say order by id desc limit $last,$amount");
+$query=mysql_query("select * from house_rent order by id desc limit $last,$amount");
 while ($row=mysql_fetch_array($query)) {
 	$sayList[] = array(
-		'table_id'=>$row['id'],
+		'content-box'=>$row['id'],//house_rent_id
 		'district'=>$row['district'],
 		'rent_type'=>$row['rent_type'],
 		'room_type'=>$row['room_type'],
@@ -27,9 +27,10 @@ while ($row=mysql_fetch_array($query)) {
 		'price'=>$row['price'],
 		'view'=>$row['view'],
 		'want'=>$row['want'],
+		'title'=>$row['title'],
 		'content'=>$row['content'],
 		'room-pic'=>$row['cover_img'],
-		'author'=>$user[$row['userid']],
+		'author'=>$user[$row['user_id']],
 		'date'=>date('m-d H:i',$row['addtime'])
       );
 }

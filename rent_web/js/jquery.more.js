@@ -73,6 +73,14 @@
                     	  	if(key == 'room-pic' || key == 'user_headimg'){
                     	  		//alert(key);
 	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('src',value);
+	                    	  }else if(key == 'content-box'){
+                    	  		//alert(key);
+                    	  		var href="pages/rent_info.php?house_rent_id="+value;
+	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
+	                    	  }else if(key == 'sm_a'){
+                    	  		//alert(key);
+                    	  		var href="http://m.newsmth.net/user/query/"+value;
+	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
 	                    	  }else{
 	                    	  	//alert(key);
                     	  		if(t.find('.'+key)) t.find('.'+key).html(value);

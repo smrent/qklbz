@@ -16,7 +16,7 @@ $user = array('demo1','demo2','demo3','demo3','demo4');
 //$rs0=mysql_query("select max(ID) from pic_sheji");
 //$maxid = mysql_fetch_array($rs0);
 
-$query=mysql_query("select * from houseseek order by id desc limit $last,$amount");
+$query=mysql_query("select * from house_seek order by id desc limit $last,$amount");
 while ($row=mysql_fetch_array($query)) {
 	$sayList[] = array(
 		'table_id'=>$row['id'],
