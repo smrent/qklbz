@@ -16,8 +16,8 @@ $user = array('demo1','demo2','demo3','demo3','demo4');
 //$rs0=mysql_query("select max(ID) from pic_sheji");
 //$maxid = mysql_fetch_array($rs0);
 
-$query=mysql_query("select * from house_rent order by id desc limit $last,$amount");
-while ($row=mysql_fetch_array($query)) {
+$result=$mysqli->query("select * from house_rent order by id desc limit $last,$amount");
+while ($row=$result->fetch_array()) {
 	$sayList[] = array(
 		'content-box'=>$row['id'],//house_rent_id
 		'district'=>$row['district'],
