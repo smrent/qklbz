@@ -70,17 +70,38 @@
                     $.each(this, function(key, value){
                     	  if(t.find('.'+key)) {
                     	  	
-                    	  	if(key == 'room-pic' || key == 'user_headimg'){
+                    	  	if(key == 'room-pic' || key == 'user_headimg'){//房源照片 用户头像
                     	  		//alert(key);
 	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('src',value);
-	                    	  }else if(key == 'content-box'){
+	                    	  }else if(key == 'content-box'){//出租详情链接
                     	  		//alert(key);
                     	  		var href="pages/rent_info.php?house_rent_id="+value;
 	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
-	                    	  }else if(key == 'sm_a'){
-                    	  		//alert(key);
-                    	  		var href="http://m.newsmth.net/user/query/"+value;
-	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
+	                    	  }else if(key == 'sm_id'){//水木社区ID
+                    	  		
+                    	  		if(value != "未填写"){
+                    	  			if(t.find('.'+key)) t.find('.'+key).html(value);
+                    	  		}else{
+                    	  			alert(value);
+                    	  			var href="http://m.newsmth.net/user/query/"+value;
+                    	  			var innerhtml="<a style='color:blue;text-decoration:underline;' href='"+href+"'>"+value+"</a>";
+                    	  			if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
+                    	  		}
+	                    	  }else if(key == 'star_sum'){//几星
+                    	  		//alert(value);   
+                    	  		if(value=='0'){
+	                    	  		var innerhtml="<div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
+	                    	  	}                	  		
+	                    	  	if(value=='1'){
+	                    	  		var innerhtml="<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
+	                    	  	}else if(value=='2'){
+	                    	  		var innerhtml="<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
+	                    	  	}else if(value=='3'){
+	                    	  		var innerhtml="<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
+	                    	  	}else if(value=='4'){
+	                    	  		var innerhtml="<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div>";
+	                    	  	}
+	                    	  	if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
 	                    	  }else{
 	                    	  	//alert(key);
                     	  		if(t.find('.'+key)) t.find('.'+key).html(value);
