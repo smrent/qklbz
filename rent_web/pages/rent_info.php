@@ -131,12 +131,12 @@
 			$myrow = mysql_fetch_array($rs);
 			$numrows=$myrow[0];
 		}
-		
-	
+		//当前观看页面的user_id
+		$wechat_openid='jikdfjkdfk4';
     ?>
     <div class="roomer-want">
         <div>想租该房子的房客<? echo $numrows; ?></div>
-        <a href="#">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        <a href="../php/AddRentWant.php?wechat_openid=<? echo $wechat_openid ?>&house_rent_id=<? echo $house_rent_id ?>">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>
     
     <div id="more">
