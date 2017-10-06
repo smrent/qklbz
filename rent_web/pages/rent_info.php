@@ -38,10 +38,10 @@
 </header>
 
 <div class=" body">
-    <!--租房信息-->
-    <!--<a href="../pages/rent_info.html" class="content-box">-->
-    <? echo "<input type='hidden' value='$house_rent_id' name='house_rent_id'/>"; ?>
-    <a class="content-box">
+  <!--租房信息-->
+  <!--<a href="../pages/rent_info.html" class="content-box">-->
+  <? echo "<input type='hidden' value='$house_rent_id' name='house_rent_id'/>"; ?>
+	<a class="content-box">
     <?
     //$sql=mysql_query("SELECT username FROM zhubo WHERE ID='$search_word'");
 		//$count=mysql_num_rows($sql);
@@ -81,7 +81,7 @@
 			echo "<div class='abstract'>";
 			echo "<ul class='room-info'>";
 			echo "<li id='district'>$district</li>";
-			echo "<li id='house-type' class='text-center'>$room_type".$area."m²</li>";
+			echo "<li id='house-type' class='text-center'>$room_type</li>";
 			echo "<li id='rent-type' class='text-right'>$rent_type</li>";
 			echo "</ul>";
 			echo "</div>";
@@ -125,113 +125,62 @@
 			echo "<hr>";
 		}
     ?>
-    
-    
-    <!--房间图片 float-->
-    <!--
-    <div class="pic-wrapper float-left pic-footer">
-        <img class="room-pic" src="../images/1.jpg" alt="">
-        <span class="pic-number">1/7</span>
-    </div>
-    -->
-    <!--房源标题 float-->
-    <!--
-    <div class="content-wrapper float-left">
-        <h4>北七家宏福苑小区二室一厅</h4>
-        <div class="abstract">
-            <ul class="room-info">
-                <li id="district">海淀区</li>
-                <li id="house-type" class="text-center">2室65m</li>
-                <li id="rent-type" class="text-right">整租</li>
-            </ul>
-        </div>
-        <div class="state">
-            <ul class="state-info">
-                <li>
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                    <span id="watcher">10</span>
-                </li>
-                <li class="text-center">
-                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                    <spqn id="want">2</spqn>
-                </li>
-                <li id="price" class="text-right">6000/月</li>
-            </ul>
-        </div>
-    </div>
-    -->
-    <!--
-    <div class="owner-info">
-        <div class="pic-wrapper">
-            <img src="../pic_people/owner1.jpg" alt="房东XXX">
-            <div class="verify"><i class="fa fa-user-o"></i>已实名</div>
-            <a href="#">
-                <small>点击了解房东</small>
-            </a>
-        </div>
-        <div class="room-desc">
-            <p>北七家宏福苑小区二室一厅。中等以上装修，阳面隔断，带8屏幕的阳台，现欲转租，房子18年7月份，没有任何中介费，个人转租，随时可以看房！</p>
-        </div>
-    </div>
-    --> 
-    
+    <?
+    $rs=mysql_query("SELECT count(*) FROM `rent_want` WHERE house_rent_id = '$house_rent_id'");
+		if ($rs){//$rs为true才去取
+			$myrow = mysql_fetch_array($rs);
+			$numrows=$myrow[0];
+		}
+		//当前观看页面的user_id
+		$wechat_openid='jikdfjkdfk4';
+    ?>
     <div class="roomer-want">
-        <div>想租该房子的房客</div>
-        <a href="#">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        <div>想租该房子的房客<? echo $numrows; ?></div>
+        <a href="../php/AddRentWant.php?wechat_openid=<? echo $wechat_openid ?>&house_rent_id=<? echo $house_rent_id ?>">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>
     
     <div id="more">
         <div class="single_item"><!--onclick="alert(this.innerHTML);"-->
 	        <div class="roomer-info">
 	            <div class="pic-wrapper ">
-	                <img src="../pic_people/owner1.jpg" alt="XXX">
+	                <img src="../pic_people/owner1.jpg" alt="XXX" style="width:70px;height:70px;">
 	                <!--<div class="verify"><i class="fa fa-user-o"></i></div>-->
+	                <div class="verify">
+	                <div class="star-box">
+											<span class="star_sum"></span>
+		              </div>
+		              </div>
 	            </div>
+	            
 	            <div class="star-box smID">
-                                <div>
-                                    <small>微信号：</small>
-                                    <small class="smID">jingdongzai</small>
-                                </div>
-                                <div>
-                                    <small>水木社区ID：</small>
-                                    <small class="smID"><a href="http://baidu.com">高富帅</a></small>
-                                </div>
-                                <div class="star-box">
-                                    <small>信息完整度：</small>
-                                    <div class="star "><i class="fa fa-star"></i></div>
-                                    <div class="star "><i class="fa fa-star"></i></div>
-                                    <div class="star "><i class="fa fa-star"></i></div>
-                                    <div class="star "><i class="fa fa-star"></i></div>
-                                </div>
-                </div>
+		              <div>
+		                  <small>微信号：</small>
+		                  <small class="smID"><span class="wechat"></span></small>
+		              </div>
+		              <div>
+		                  <small>水木ID：</small>
+		                  <small class="smID"><span class="sm_id"></span></small>
+		              </div>
+		              <div>
+		                  <small>毕业学校：</small>
+		                  <small class="smID"><span class="university"></span></small>
+		              </div>
+		              <div>
+		                  <small>所在行业：</small>
+		                  <small class="smID"><span class="industry"></span></small>
+		              </div>
+		              <div>
+		                  <small>是否单身：</small>
+		                  <small class="smID"><span class="status"></span></small>
+		              </div>
+		              
+              </div>
 	        </div>
 	        <hr>
 	      </div>
 	      <a href="javascript:;" class="get_more" style="color:#007bc4/*#424242*/; text-decoration:none;outline: none;">::more::</a>
-	  </div>  
-        
-        <!--
-        <div class="roomer-info">
-            <div class="pic-wrapper ">
-                <img src="../pic_people/owner1.jpg" alt="XXX">
-                <div class="verify"><i class="fa fa-user-o"></i>已实名</div>
-            </div>
-            <div class="star-box smID">
-                <small>水木社区ID：</small>
-                <small class="smID">穷挫矮</small>
-            </div>
-            <div class="star-box">
-                <small>信息完整度：</small>
-                <div class="star "><i class="fa fa-star"></i></div>
-                <div class="star "><i class="fa fa-star"></i></div>
-                <div class="star "><i class="fa fa-star-half-o"></i></div>
-                <div class="star "><i class="fa fa-star-o"></i></div>
-                <div class="star "><i class="fa fa-star-o"></i></div>
-            </div>
-        </div>
-				-->
-
-    </div>
+	  </div> 
+  </div>
 
 
 </div>

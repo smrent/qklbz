@@ -37,38 +37,61 @@
     <div class="roomer-info">
         <div class="pic-wrapper ">
             <img src="../pic_people/owner1.jpg" alt="XXX">
-            <div class="verify"><i class="fa fa-user-o"></i>已实名</div>
+            <div class="verify">
+	            <div class="star-box">
+		            <div class="star "><i class="fa fa-star"></i></div>
+		            <div class="star "><i class="fa fa-star"></i></div>
+		            <div class="star "><i class="fa fa-star-half-o"></i></div>
+		            <div class="star "><i class="fa fa-star-o"></i></div>
+	        		</div>
+	        		
+        		</div>
+        		<div class="info-box">
+				       <p>虚假填写将被关小黑屋</p>
+			      </div>
+            <!--<div class="verify"><i class="fa fa-user-o"></i>已实名</div>-->
         </div>
-        <div class="star-box smID">
-            <small>水木社区ID：</small>
-            <small class="smID">穷挫矮</small>
-        </div>
-        <div class="star-box">
-            <small>信息完整度：</small>
-            <div class="star "><i class="fa fa-star"></i></div>
-            <div class="star "><i class="fa fa-star"></i></div>
-            <div class="star "><i class="fa fa-star-half-o"></i></div>
-            <div class="star "><i class="fa fa-star-o"></i></div>
-        </div>
-    </div>
-    <hr>
-    <div class="info-box">
-        <h3>优先推荐</h3>
-        <p>个人信息完整度高的租房需求</p>
+        <div class="info-box">
+	        <h3>优先推荐</h3>
+	        <p>信息完整度高的需求</p>
+    		</div>
+    		
         <form class="info-form" action="submit">
-            <label for="weixin">微信号:</label>
-            <input id="weixin" placeholder="常用微信号（或QQ号）" type="number"><br>
-            <label for="smID">水木ID:</label>
-            <input id="smID" placeholder="水木社区ID" type="number"><br>
-            <label for="university">毕业学校:</label>
-            <input id="university" placeholder="如：清华大学" type="number"><br>
-            <label for="creer">从事行业:</label>
-            <input id="creer" placeholder="如：人工智能" type="text"><br>
-            <label for="expectation">你的期望:</label>
-            <textarea name="expectation" id="expectation" cols="20" rows="10" placeholder="对室友或租户的期望..." ></textarea>
+            <!--<label for="weixin">微信号:</label>-->
+            <!--<input id="weixin" placeholder="常用微信号（或QQ号）" type="number"><br>-->
+            <div class="star-box smID">
+	            <label for="smID">单身:</label>
+	            <select name="" style="color:#999;">
+	            	<option value="请选择">请选择</option>
+								<option value="是">是</option>
+								<option value="否">否</option> 
+							</select> 
+            </div>
+            <div class="star-box smID">
+	            <label for="smID">水木:</label>
+	            <input id="smID" placeholder="水木社区ID" type="number">
+            </div>
+            <div class="star-box smID">
+	            <label for="university">大学:</label>
+	            <input id="university" placeholder="如：清华大学" type="number">
+            </div>
+            <div class="star-box smID">
+	            <label for="creer">行业:</label>
+	            <input id="creer" placeholder="如：互联网" type="text">
+            </div>
+            <!--<label for="expectation">你的期望:</label>
+            <textarea name="expectation" id="expectation" cols="20" rows="10" placeholder="对室友或租户的期望..." ></textarea>-->
+        		<input id="submit" placeholder="如：互联网" type="reset" style="float:left;margin-left:30px;margin-top:15px;width:20%">
+        		<input id="submit" placeholder="如：互联网" type="submit" style="float:left;margin-left:4px;margin-top:15px;width:20%">
         </form>
+       	<div class="info-box">
+	        
+    		</div>
     </div>
+    <br>
     <hr>
+    
+    <br><br> 
     <div class="shortcut-btn">
         <a href="#" class="">
             <i class="fa fa-home fa-2x  " aria-hidden="true"></i>
