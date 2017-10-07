@@ -81,7 +81,7 @@
 			echo "<div class='abstract'>";
 			echo "<ul class='room-info'>";
 			echo "<li id='district'>$district</li>";
-			echo "<li id='house-type' class='text-center'>$room_type".$area."m²</li>";
+			echo "<li id='house-type' class='text-center'>$room_type</li>";
 			echo "<li id='rent-type' class='text-right'>$rent_type</li>";
 			echo "</ul>";
 			echo "</div>";
@@ -131,21 +131,27 @@
 			$myrow = mysql_fetch_array($rs);
 			$numrows=$myrow[0];
 		}
-		
-	
+		//当前观看页面的user_id
+		$wechat_openid='jikdfjkdfk4';
     ?>
     <div class="roomer-want">
         <div>想租该房子的房客<? echo $numrows; ?></div>
-        <a href="#">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        <a href="../php/AddRentWant.php?wechat_openid=<? echo $wechat_openid ?>&house_rent_id=<? echo $house_rent_id ?>">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>
     
     <div id="more">
         <div class="single_item"><!--onclick="alert(this.innerHTML);"-->
 	        <div class="roomer-info">
 	            <div class="pic-wrapper ">
-	                <img src="../pic_people/owner1.jpg" alt="XXX">
+	                <img src="../pic_people/owner1.jpg" alt="XXX" style="width:70px;height:70px;">
 	                <!--<div class="verify"><i class="fa fa-user-o"></i></div>-->
+	                <div class="verify">
+	                <div class="star-box">
+											<span class="star_sum"></span>
+		              </div>
+		              </div>
 	            </div>
+	            
 	            <div class="star-box smID">
 		              <div>
 		                  <small>微信号：</small>
@@ -163,10 +169,11 @@
 		                  <small>所在行业：</small>
 		                  <small class="smID"><span class="industry"></span></small>
 		              </div>
-		              <div class="star-box">
-		                  <small>信息完整度：</small>
-											<span class="star_sum"></span>
+		              <div>
+		                  <small>是否单身：</small>
+		                  <small class="smID"><span class="status"></span></small>
 		              </div>
+		              
               </div>
 	        </div>
 	        <hr>

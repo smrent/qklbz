@@ -62,6 +62,7 @@ while ($row=mysql_fetch_array($query)) {
 	  'sm_id'=>$sm_id,
 	  'university'=>$university,
 	  'industry'=>$industry,
+	  'status'=>$status,
 	  'star_sum'=>$star_sum,
 		'user_id'=>$user_id,
 		'house_rent_id'=>$house_rent_id,

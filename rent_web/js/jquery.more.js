@@ -78,11 +78,11 @@
                     	  		var href="pages/rent_info.php?house_rent_id="+value;
 	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
 	                    	  }else if(key == 'sm_id'){//Ë®Ä¾ÉçÇøID
-                    	  		
-                    	  		if(value != "Î´ÌîÐ´"){
+                    	  		//alert(value);
+                    	  		if(value == "Î´ÌîÐ´"){
                     	  			if(t.find('.'+key)) t.find('.'+key).html(value);
                     	  		}else{
-                    	  			alert(value);
+                    	  			//alert(value);
                     	  			var href="http://m.newsmth.net/user/query/"+value;
                     	  			var innerhtml="<a style='color:blue;text-decoration:underline;' href='"+href+"'>"+value+"</a>";
                     	  			if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
