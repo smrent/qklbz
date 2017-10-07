@@ -86,3 +86,32 @@ div.star{
 .star-box {
     float: left;
 }
+
+/*tab导航栏*/
+.tab-bar{
+    height:2.5em;
+    width:100%;
+    margin-bottom: 5px;
+    border-top:1px solid #ccc;
+}
+.tab-btn{
+    display: inline-block;
+    height:2.5em;
+    line-height: 2.5em;
+    width:49%;
+    text-align: center;
+    border-bottom:1px solid #ccc;
+}
+.tab-btn.active{
+    border-bottom:2px solid dodgerblue;
+    color:dodgerblue;
+}
+.tab-bar a:nth-child(1){
+    border-right:1px solid #ccc;
+}
+.info-box{
+    width:60%;
+}
+.info-box ul li{
+    width:90%;
+}
