@@ -97,7 +97,7 @@
 			echo "<i class='fa fa-thumbs-o-up' aria-hidden='true'></i>";
 			echo "<spqn id='want'>$want</spqn>";
 			echo "</li>";
-			echo "<li id='price' class='text-right'>$price/月</li>";
+			echo "<li id='price' class='text-right'>$price</li>";
 			echo "</ul>";
 			echo "</div>";
 			echo "</div>";
@@ -108,23 +108,108 @@
 	  	$rst2 = mysql_query($sql2); 
 			while ($row2 = mysql_fetch_array($rst2)){
 				$headimg=$row2["headimg"];
-				//echo $headimg;
+				$wechat=$row2["wechat"];
+				$status=$row2["status"];
+				$sm_id=$row2["sm_id"];
+				$university=$row2["university"];
+				$industry=$row2["industry"];
+				$star_sum=0;
+				if($status != ""){
+					$star_sum++;
+				}
+				if($sm_id != ""){
+					$star_sum++;
+				}
+				if($university != ""){
+					$star_sum++;
+				}
+				if($industry != ""){
+					$star_sum++;
+				}
+				
+				if($status==""){
+					$status="未填写";
+				}
+				if($sm_id==""){
+					$sm_id="未填写";
+				}
+				if($university==""){
+					$university="未填写";
+				}
+				if($industry==""){
+					$industry="未填写";
+				}
 			}
-    	echo "<div class='owner-info'>";
-			echo "<div class='pic-wrapper'>";
-			echo "<img src='$headimg' alt='房东'>";
-			//echo "<div class='verify'><i class='fa fa-user-o'></i>已实名</div>";
-			echo "<a href='#'>";
-			echo "<small>点击了解房东</small>";
-			echo "</a>";
+//    	echo "<div class='owner-info'>";
+//			echo "<div class='pic-wrapper'>";
+//			echo "<img src='$headimg' alt='房东'>";
+//			//echo "<div class='verify'><i class='fa fa-user-o'></i>已实名</div>";
+//			echo "<a href='#'>";
+//			echo "<small>点击了解房东</small>";
+//			echo "</a>";
+//			echo "</div>";
+//			echo "<div class='room-desc'>";
+//			echo "<p>$content</p>";
+//			echo "</div>";
+//			echo "</div>";
+//			echo "<hr>";
+			//双tab
+			echo "<div id='tab-bar' class='tab-bar'>";
+			echo "<a href='#' data-content='tab-content-1' class='tab-btn active'>房源信息</a>";//此注释不可删除！！ 两个a标签不可调整，不可换行！
+			echo "<a href='#' data-content='tab-content-2' class='tab-btn'>房东信息</a>";
 			echo "</div>";
-			echo "<div class='room-desc'>";
+			echo "<a style='display: inline-block;' id='tab-content-1' class='content-box'>";
+			//房源标题 float
+			echo "<div class='room-desc float-left'>";
 			echo "<p>$content</p>";
 			echo "</div>";
+			
+			echo "</a>";
+			echo "<div style='display: none;' id='tab-content-2' class='owner-info'>";
+			echo "<div class='pic-wrapper'>";
+			echo "<img src='$headimg' alt='房东' style='width:70%;height:70%;'>";
+			echo "<div class='verify'>";
+			echo "<div class='star-box'>";
+			echo "<div class='star_sum'>";
+			if($star_sum==0){
+				echo "<div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
+			}
+			if($star_sum==1){
+				echo "<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
+			}
+			if($star_sum==2){
+				echo "<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
+			}
+			if($star_sum==3){
+				echo "<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
+			}
+			if($star_sum==4){
+				echo "<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div>";
+			}
 			echo "</div>";
-			echo "<hr>";
+			echo "</div>";
+			echo "</div>";
+			echo "</div>";
+			echo "<div class='info-box float-left'>";
+			echo "<ul>";
+			echo "<li>微信号：<span>$wechat</span></li>";
+			if($sm_id=="未填写"){
+				echo "<li>水木ID：<span>$sm_id</span></li>";
+			}else{
+				echo "<li>水木ID：<a href='http://m.newsmth.net/user/query/$sm_id' style='color:blue;text-decoration:underline;'><span>$sm_id</span></a></li>";
+			}
+			
+			echo "<li>毕业学校：<span>$university</span></li>";
+			echo "<li>所在行业：<span>$industry</span></li>";
+			echo "<li>是否单身：<span>$status</span></li>";
+			echo "</ul>";
+			echo "</div>";
+			echo "</div>"; 
 		}
     ?>
+		
+    
+    
     <?
     $rs=mysql_query("SELECT count(*) FROM `rent_want` WHERE house_rent_id = '$house_rent_id'");
 		if ($rs){//$rs为true才去取
@@ -132,18 +217,20 @@
 			$numrows=$myrow[0];
 		}
 		//当前观看页面的user_id
-		$wechat_openid='jikdfjkdfk4';
+		$wechat_openid='jikdfjkdfk';
     ?>
-    <div class="roomer-want">
+    <hr>
+    <br>
+    <div class="roomer-want"><!--自己不能想租自己的房子 自己也不能关注自己的求租-->
         <div>想租该房子的房客<? echo $numrows; ?></div>
-        <a href="../php/AddRentWant.php?wechat_openid=<? echo $wechat_openid ?>&house_rent_id=<? echo $house_rent_id ?>">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+        <a href="../php/AddRentWant.php?wechat_openid=<? echo $wechat_openid ?>&house_rent_id=<? echo $house_rent_id ?>&owner_id=<? echo $user_id ?>">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>
     
     <div id="more">
         <div class="single_item"><!--onclick="alert(this.innerHTML);"-->
 	        <div class="roomer-info">
 	            <div class="pic-wrapper ">
-	                <img src="../pic_people/owner1.jpg" alt="XXX" style="width:70px;height:70px;">
+	                <img src="../pic_people/owner1.jpg" alt="XXX" style="width:70%;height:70%;">
 	                <!--<div class="verify"><i class="fa fa-user-o"></i></div>-->
 	                <div class="verify">
 	                <div class="star-box">
@@ -184,6 +271,6 @@
 
 
 </div>
-
+<script src="../js/showTab.js"></script>
 </body>
 </html>
