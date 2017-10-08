@@ -4,7 +4,9 @@
     line-height: 20px;
     font-size: 2em;
 }
-
+.content-box{
+    margin-top: 10px;
+}
 .nav-return{
     width: 100%;
     margin-top: 1%;
@@ -15,7 +17,7 @@ div.body{
 }
 .owner-info{
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .room-desc{
     padding:0 10%;
