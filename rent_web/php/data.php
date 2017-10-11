@@ -16,14 +16,13 @@ $user = array('demo1','demo2','demo3','demo3','demo4');
 //$rs0=mysql_query("select max(ID) from pic_sheji");
 //$maxid = mysql_fetch_array($rs0);
 
-$result=$mysqli->query("select * from house_rent order by id desc limit $last,$amount");
-while ($row=$result->fetch_array()) {
+$query=mysql_query("select * from house_rent order by id desc limit $last,$amount");
+while ($row=mysql_fetch_array($query)) {
 	$sayList[] = array(
 		'content-box'=>$row['id'],//house_rent_id
 		'district'=>$row['district'],
 		'rent_type'=>$row['rent_type'],
 		'room_type'=>$row['room_type'],
-		'area'=>$row['area'],
 		'price'=>$row['price'],
 		'view'=>$row['view'],
 		'want'=>$row['want'],
