@@ -101,7 +101,7 @@
 			echo "</ul>";
 			echo "</div>";
 			echo "</div>";
-			echo "</a>";
+			echo "</a>";//<a class="content-box">
 			//echo "<hr>";
 			$rows2 = mysql_num_rows(mysql_query("SELECT * FROM user where id='$user_id'")); 
 	  	$sql2 = "SELECT * FROM user where id='$user_id'";
@@ -241,23 +241,23 @@
 	            
 	            <div class="star-box smID">
 		              <div>
-		                  <small>微信号：</small>
+		                  <small style="color:#999;">微信号：</small>
 		                  <small class="smID"><span class="wechat"></span></small>
 		              </div>
 		              <div>
-		                  <small>水木ID：</small>
+		                  <small style="color:#999;">水木ID：</small>
 		                  <small class="smID"><span class="sm_id"></span></small>
 		              </div>
 		              <div>
-		                  <small>毕业学校：</small>
+		                  <small style="color:#999;">毕业学校：</small>
 		                  <small class="smID"><span class="university"></span></small>
 		              </div>
 		              <div>
-		                  <small>所在行业：</small>
+		                  <small style="color:#999;">所在行业：</small>
 		                  <small class="smID"><span class="industry"></span></small>
 		              </div>
 		              <div>
-		                  <small>是否单身：</small>
+		                  <small style="color:#999;">是否单身：</small>
 		                  <small class="smID"><span class="status"></span></small>
 		              </div>
 		              
