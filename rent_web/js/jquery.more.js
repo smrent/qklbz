@@ -77,6 +77,10 @@
                     	  		//alert(key);
                     	  		var href="pages/rent_info.php?house_rent_id="+value;
 	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
+	                    	  }else if(key == 'content-box-houseSeek'){//求租详情链接
+                    	  		//alert(key);
+                    	  		var href="houseSeek_info.php?house_seek_id="+value;
+	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
 	                    	  }else if(key == 'sm_id'){//水木社区ID
                     	  		//alert(value);
                     	  		if(value == "未填写"){
