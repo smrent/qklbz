@@ -95,7 +95,7 @@
 			echo "</li>";
 			echo "<li class='text-center'>";
 			echo "<i class='fa fa-thumbs-o-up' aria-hidden='true'></i>";
-			echo "<spqn id='want'>$want</spqn>";
+			echo "<span id='want'>$want</span>";
 			echo "</li>";
 			echo "<li id='price' class='text-right'>$price</li>";
 			echo "</ul>";
