@@ -15,12 +15,23 @@ $user = array('demo1','demo2','demo3','demo3','demo4');
 
 //$rs0=mysql_query("select max(ID) from pic_sheji");
 //$maxid = mysql_fetch_array($rs0);
-
+//求租query
 $query=mysql_query("select * from house_seek order by id desc limit $last,$amount");
+//用户信息
+
+
 while ($row=mysql_fetch_array($query)) {
+	//通过user_id去去user信息
+	$user_id=$row['user_id'];
+	$rows2 = mysql_num_rows(mysql_query("SELECT * FROM user where id='$user_id'")); 
+	$sql2 = "SELECT * FROM user where id='$user_id'";
+	$rst2 = mysql_query($sql2); 
+	while ($row2 = mysql_fetch_array($rst2)){
+		$headimg=$row2["headimg"];
+	}
 	$sayList[] = array(
 		'content-box-houseSeek'=>$row['id'],
-		'user_headimg'=>$row['user_headimg'],
+		'user_headimg'=>$headimg,
 		'district'=>$row['district'],
 		'room_type'=>$row['room_type'],
 		'rent_type'=>$row['rent_type'],
