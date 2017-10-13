@@ -54,7 +54,7 @@
   	$sql = "SELECT * FROM house_seek where id='$house_seek_id'";
   	$rst = mysql_query($sql); 
 		while ($row = mysql_fetch_array($rst)){
-			$user_headimg=$row["user_headimg"];
+			//求租信息
 			$title=$row["title"];
 			$district=$row["district"];
 			$room_type=$row["room_type"];
@@ -64,43 +64,7 @@
 			$subway=$row["subway"];
 			$content=$row["content"];
 			$user_id=$row["user_id"];
-			//房间图片 float
-			echo "<div class='pic-wrapper float-left pic-footer'>";
-			echo "<img src='$user_headimg' alt='求租人'>";
-			echo "</div>";
-			//房源标题 float
-			echo "<div class='content-wrapper float-left'>";
-			echo "<h4>$title</h4>";
-			//房间属性简介 block 垂直排列
-			echo "<div class='abstract'>";
-			echo "<ul class='room-info'>";
-			echo "<li id='district'>$district</li>";
-			echo "<li id='house-type' class='text-center'>$room_type</li>";
-			echo "<li id='rent-type' class='text-right'>$rent_type</li>";
-			echo "</ul>";
-			echo "</div>";
-			echo "<div class='state'>";
-			echo "<ul class='state-info'>";
-			//房源状态描述
-			echo "<li>";
-			echo "<i class='fa fa-eye' aria-hidden='true'></i>";
-			echo "<span id='watcher'>$view</span>";
-			echo "</li>";
-			//echo "<li class='text-center'>";
-			//echo "<i class='fa fa-thumbs-o-up' aria-hidden='true'></i>";
-			//echo "<spqn id='want'>2</spqn>";
-			//echo "</li>";
-			echo "<li class='text-center'>";
-			echo "<i class='fa fa-heart' aria-hidden='true'></i>";
-			//echo "<span><div class='follow'>$follow</div></span>";
-			echo "<span class='follow'>$follow</span>";
-			echo "</li>";
-			echo "<li id='price' class='text-right'>$subway</li>";
-			echo "</ul>";
-			echo "</div>";
-			echo "</div>";
-			echo "</div>";
-			//echo "<hr>";
+			//用户信息
 			$rows2 = mysql_num_rows(mysql_query("SELECT * FROM user where id='$user_id'")); 
 	  	$sql2 = "SELECT * FROM user where id='$user_id'";
 	  	$rst2 = mysql_query($sql2); 
@@ -138,6 +102,45 @@
 					$industry="未填写";
 				}
 			}
+			
+			//房间图片 float
+			echo "<div class='pic-wrapper float-left pic-footer'>";
+			echo "<img src='$headimg' alt='求租人'>";
+			echo "</div>";
+			//房源标题 float
+			echo "<div class='content-wrapper float-left'>";
+			echo "<h4>$title</h4>";
+			//房间属性简介 block 垂直排列
+			echo "<div class='abstract'>";
+			echo "<ul class='room-info'>";
+			echo "<li id='district'>$district</li>";
+			echo "<li id='house-type' class='text-center'>$room_type</li>";
+			echo "<li id='rent-type' class='text-right'>$rent_type</li>";
+			echo "</ul>";
+			echo "</div>";
+			echo "<div class='state'>";
+			echo "<ul class='state-info'>";
+			//房源状态描述
+			echo "<li>";
+			echo "<i class='fa fa-eye' aria-hidden='true'></i>";
+			echo "<span id='watcher'>$view</span>";
+			echo "</li>";
+			//echo "<li class='text-center'>";
+			//echo "<i class='fa fa-thumbs-o-up' aria-hidden='true'></i>";
+			//echo "<spqn id='want'>2</spqn>";
+			//echo "</li>";
+			echo "<li class='text-center'>";
+			echo "<i class='fa fa-heart' aria-hidden='true'></i>";
+			//echo "<span><div class='follow'>$follow</div></span>";
+			echo "<span class='follow'>$follow</span>";
+			echo "</li>";
+			echo "<li id='price' class='text-right'>$subway</li>";
+			echo "</ul>";
+			echo "</div>";
+			echo "</div>";
+			echo "</div>";
+			//echo "<hr>";
+			
 //    	echo "<div class='owner-info'>";
 //			echo "<div class='pic-wrapper'>";
 //			echo "<img src='$headimg' alt='房东'>";
@@ -153,7 +156,7 @@
 //			echo "<hr>";
 			//双tab
 			echo "<div id='tab-bar' class='tab-bar'>";
-			echo "<a href='#' data-content='tab-content-1' class='tab-btn active'>求租信息</a>";//此注释不可删除！！ 两个a标签不可调整，不可换行！
+			echo "<a href='#' data-content='tab-content-1' class='tab-btn active'>求租详情</a>";//此注释不可删除！！ 两个a标签不可调整，不可换行！
 			echo "<a href='#' data-content='tab-content-2' class='tab-btn'>联系租户</a>";
 			echo "</div>";
 			echo "<a style='display: inline-block;' id='tab-content-1' class='content-box'>";
@@ -165,7 +168,7 @@
 			echo "</a>";
 			echo "<div style='display: none;' id='tab-content-2' class='owner-info'>";
 			echo "<div class='pic-wrapper'>";
-			echo "<img src='$headimg' alt='租户' style='width:70%;height:70%;'>";
+			echo "<img src='../images/xin.jpg' alt='租户信息完整度logo' style='width:70%;height:70%;'>";
 			echo "<div class='verify'>";
 			echo "<div class='star-box'>";
 			echo "<div class='star_sum'>";
@@ -196,7 +199,6 @@
 			}else{
 				echo "<li>水木ID：<a href='http://m.newsmth.net/user/query/$sm_id' style='color:blue;text-decoration:underline;'><span>$sm_id</span></a></li>";
 			}
-			
 			echo "<li>毕业学校：<span>$university</span></li>";
 			echo "<li>所在行业：<span>$industry</span></li>";
 			echo "<li>是否单身：<span>$status</span></li>";
@@ -205,8 +207,6 @@
 			echo "</div>"; 
 		}
     ?>
-		
-    
     
     <?
     $rs=mysql_query("SELECT count(*) FROM `rent_want` WHERE house_seek_id = '$house_seek_id'");
@@ -220,7 +220,7 @@
     <hr>
     <br>
     <div class="roomer-want"><!--自己不能想租自己的房子 自己也不能关注自己的求租-->
-        <div>想租该房子的房客<? echo $numrows; ?></div>
+        <div>关注该需求的用户<? echo $numrows; ?></div>
         <a href="../php/AddRentWant.php?wechat_openid=<? echo $wechat_openid ?>&house_seek_id=<? echo $house_seek_id ?>&owner_id=<? echo $user_id ?>">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>
     
