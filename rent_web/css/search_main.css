@@ -1,0 +1,130 @@
+*{
+    padding:0;
+    margin:0;
+}
+h3{
+    color: #484848;
+    padding: 3px 0;
+}
+h4{
+    color:#CCCCCC;
+    padding: 2px 0;
+}
+label{
+    color: #797979;
+}
+li {
+    text-decoration: none;
+    display: block;
+}
+textarea{
+    border:1px solid lightskyblue;
+}
+a,a:visited {color: #14a9ff;text-decoration:none;outline:none;}
+a:hover,a:active,a:focus {text-decoration:underline;color:#62a315;background-color:transparent;}
+input:focus,input:active{
+    line-height: 2em;
+    height: 2em;
+    border: 0;
+}
+
+.search-bar{
+    margin:25px auto;
+    text-align: center;
+
+
+}
+input{
+    line-height: 2em;
+    height:2em;
+    border:0;
+}
+.submit,select{
+    line-height: 2.3em;
+    border:0;
+}
+.submit{
+    background-color: #5DA30C;
+    width: 20%;
+}
+.search{
+    border: 1px solid greenyellow;
+    width:90%;
+    margin:auto;
+}
+#type{
+    width: 25%;
+}
+.number{
+    border-left:1px solid greenyellow;
+    width: 54%;
+
+}
+div.info-box{
+    width:96%;
+    margin:0 2%;
+    overflow: hidden;
+}
+div.info-box-left{
+    width:55%;
+    text-align: center;
+}
+.info-box-left ul li {
+    text-align: left;
+}
+.info-box-right{
+    width:45%;
+    text-align: center;
+}
+.float{
+    float:left;
+}
+
+/*comment-box*/
+.comment-box{
+    text-align: center;
+}
+.comment label input{
+    vertical-align: bottom;
+}
+.comment label{
+    display: inline-block;
+    padding:5px 3px ;
+}
+textarea{
+    width:94%;
+    margin:0 3%;
+    display: block;
+}
+
+.submit_comment{
+    border-radius: 5px 5px;
+    background-color: #ea9963;
+    color: #fdffe2;
+    width:6em;
+    height:2.5em;
+    text-align: center;
+    position: relative;
+    left:35%;
+    margin-top: 9px;
+}
+/*info-box-right*/
+.info-box-right ul li {
+    text-align: left;
+    overflow: hidden;
+}
+.star{
+    color:gold;
+}
+
+.pic-wrapper{
+    width: 30%;
+}
+img{
+    width: 100%;
+}
+@media only screen and (max-width: 479px)  {
+    .body{
+
+    }
+}
