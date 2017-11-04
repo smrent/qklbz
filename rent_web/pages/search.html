@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/search_main.css">
+    <link rel="stylesheet" href="../css/rent_info_main.css">
+
+</head>
+<body>
+<div class=" body">
+    <div class="search-bar">
+        <form action="search" class="search">
+            <select name="type" id="type">
+                <option value="wchat">微信号:</option>
+                <option value="phone_number">手机号:</option>
+            </select><!--
+            !--><input type="text" class="number" placeholder="微信号或手机号"><!--
+            !--><input type="submit" class="submit" value="搜索">
+        </form>
+    </div>
+    <div class="info-box">
+        <div class="info-box-left float">
+            <ul>
+                <li><h3>手机号</h3></li>
+                <li><h3 class="phone-number">13545454454</h3></li>
+                <li><h4>认证：<span>保洁张师傅</span></h4></li>
+                <li><h4>来源：<span><a href="#">水木社区</a></span></h4></li>
+            </ul>
+        </div>
+        <div class="info-box-right float">
+            <ul>
+                <li><h3>靠谱指数</h3></li>
+                <li> <div class="star-box">
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                </div></li>
+                <li><h4>共有点评：<span>3999</span></h4></li>
+            </ul>
+        </div>
+    </div>
+    <div class="comment-box">
+        <form action="comment" class="comment">
+            <span>评价:</span>
+            <label><input name="comment" type="radio" value="" />很差 </label>
+            <label><input name="comment" type="radio" value="" />较差 </label>
+            <label><input name="comment" type="radio" value="" />还行 </label>
+            <label><input name="comment" type="radio" value="" />推荐 </label>
+            <label><input name="comment" type="radio" value="" checked/>力荐 </label>
+            <textarea name="comment" id="" cols="30" rows="10">写点评价吧~！</textarea>
+            <input type="submit" class="submit_comment" value="提交">
+        </form>
+    </div>
+    <div class="comments section">
+        <div>
+            <div class="roomer-info">
+                <div class="pic-wrapper ">
+                    <img src="../pic_people/owner1.jpg" alt="XXX">
+                    <div class="verify"><i class="fa fa-user-o"></i>已实名</div>
+                </div>
+                <div class="star-box smID">
+                    <small>水木社区ID：</small>
+                    <small class="smID">高富帅</small>
+                </div>
+                <div class="star-box">
+                    <small>评分：</small>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                </div>
+                <div class="comment-box">
+                    <textarea name="comment" id="" cols="30" rows="3">不错不错~！~！</textarea>
+                </div>
+            </div>
+            <div class="roomer-info">
+                <div class="pic-wrapper ">
+                    <img src="../pic_people/owner1.jpg" alt="XXX">
+                    <div class="verify"><i class="fa fa-user-o"></i>已实名</div>
+                </div>
+                <div class="star-box smID">
+                    <small>水木社区ID：</small>
+                    <small class="smID">高富帅</small>
+                </div>
+                <div class="star-box">
+                    <small>评分：</small>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                    <div class="star "><i class="fa fa-star"></i></div>
+                </div>
+                <div class="comment-box">
+                    <textarea name="comment" id="" cols="30" rows="3">不错不错~！~！</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
