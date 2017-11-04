@@ -69,8 +69,17 @@ footer{
     text-align: center;
 }
 .fo-nav{
-    width:25%;
+    /*width:25%;*/
+    width:49%;
+
     text-align: center;
+}
+.fo-nav:first-child{
+    border-right: 1px #ccc solid;
+}
+.nav-btn.fo-nav a{
+    width:100%;
+    padding:10px 0;
 }
 .nav-btn a{
 	font-size:10px;
