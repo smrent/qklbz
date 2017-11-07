@@ -1,8 +1,7 @@
-<?
+<?php
 	error_reporting(E_ALL & ~E_NOTICE);
 	$house_rent_id=$_GET['house_rent_id'];
-	
-	//echo $house_rent_id;
+	//echo "house_rent_id:".$house_rent_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,20 +39,22 @@
 <div class=" body">
   <!--租房信息-->
   <!--<a href="../pages/rent_info.html" class="content-box">-->
-  <? echo "<input type='hidden' value='$house_rent_id' name='house_rent_id'/>"; ?>
+  <?php echo "<input type='hidden' value='$house_rent_id' name='house_rent_id'/>"; ?>
 	<a class="content-box">
-    <?
+    <?php
     //$sql=mysql_query("SELECT username FROM zhubo WHERE ID='$search_word'");
 		//$count=mysql_num_rows($sql);
 		//if($count==0){
 			//echo "<script>alert('没有该ID对应的主播');location.href='$href';</script>";
 			//exit;
 		//}else{
-		include_once("../php/connect.php");
+		//include_once("../php/connect.php");
+		//echo "house_rent_id:".$house_rent_id;
+		$mysqli = new mysqli('localhost', 'root', '123456', 'demo');
 		//$rows = mysql_num_rows(mysql_query("SELECT * FROM house_rent where id='$house_rent_id'")); 
   	$sql = "SELECT * FROM house_rent where id='$house_rent_id'";
-  	$rst = mysql_query($sql); 
-		while ($row = mysql_fetch_array($rst)){
+  	$rst = $mysqli->query($sql);
+		while ($row = $rst->fetch_array(MYSQLI_ASSOC)){
 			$cover_img=$row["cover_img"];
 			$pic_number=$row["pic_number"];
 			$pic_number=$pic_number."图";
@@ -103,10 +104,10 @@
 			echo "</div>";
 			echo "</a>";//<a class="content-box">
 			//echo "<hr>";
-			$rows2 = mysql_num_rows(mysql_query("SELECT * FROM user where id='$user_id'")); 
+			//$rows2 = mysql_num_rows(mysql_query("SELECT * FROM user where id='$user_id'")); 
 	  	$sql2 = "SELECT * FROM user where id='$user_id'";
-	  	$rst2 = mysql_query($sql2); 
-			while ($row2 = mysql_fetch_array($rst2)){
+	  	$rst2 = $mysqli->query($sql2); 
+			while ($row2 = $rst2->fetch_array(MYSQLI_ASSOC)){
 				$headimg=$row2["headimg"];
 				$wechat=$row2["wechat"];
 				$status=$row2["status"];
@@ -167,7 +168,8 @@
 			echo "</a>";
 			echo "<div style='display: none;' id='tab-content-2' class='owner-info'>";
 			echo "<div class='pic-wrapper'>";
-			echo "<img src='$headimg' alt='房东' style='width:70%;height:70%;'>";
+			//echo "<img src='$headimg' alt='房东' style='width:70%;height:70%;'>";
+			echo "<img src='../images/kp.jpg' alt='房东' style='width:70%;height:70%;'>";
 			echo "<div class='verify'>";
 			echo "<div class='star-box'>";
 			echo "<div class='star_sum'>";
@@ -210,10 +212,10 @@
 		
     
     
-    <?
-    $rs=mysql_query("SELECT count(*) FROM `rent_want` WHERE house_rent_id = '$house_rent_id'");
+    <?php
+    $rs=$mysqli->query("SELECT count(*) FROM `rent_want` WHERE house_rent_id = '$house_rent_id'");
 		if ($rs){//$rs为true才去取
-			$myrow = mysql_fetch_array($rs);
+			$myrow = $rs->fetch_array(MYSQLI_ASSOC);
 			$numrows=$myrow[0];
 		}
 		//当前观看页面的user_id
