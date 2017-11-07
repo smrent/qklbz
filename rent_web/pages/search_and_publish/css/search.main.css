@@ -121,7 +121,7 @@ form label{
     padding:15px 5px;
     width:auto;
     border:none;
-    background: linear-gradient(#e8e8e8, white);
+    background: linear-gradient(transparent, white);
 }
 .rentout{
     border:1px solid #9494c6;
@@ -144,4 +144,11 @@ input.associate{
     padding: 5px;
     width: 57%;
     margin: 15px 0 15px 32%;
+}
+
+.seek_bgcolor{
+    background-color: rgba(251, 150, 42, 0.2);
+}
+.rent_bgcolor{
+    background-color:rgba(91, 165, 249, 0.2);
 }
