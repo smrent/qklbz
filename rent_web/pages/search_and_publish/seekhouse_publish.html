@@ -34,7 +34,7 @@
             </fieldset>
             <fieldset class="form-middle">
                 <div class="line-box">
-                    <label for="district">区域</label>
+                    <label for="district">区域<a style="color:red;">*</a></label>
                     <select name="district" id="subway" >
                         <option selected>不限</option>
                         <option >朝阳区</option>
@@ -54,7 +54,7 @@
                     <p class="info">附近地铁</p>
                 </div>
                 <div class="line-box">
-                    <label for="district">房型</label>
+                    <label for="district">房型<a style="color:red;">*</a></label>
                     <select name="district" id="houseType" >
                         <option selected>不限</option>
                         <option >1居室</option>
@@ -64,7 +64,7 @@
                     <p class="info">几居室</p>
                 </div>
                 <div class="line-box">
-                    <label for="district">租金</label>
+                    <label for="district">租金<a style="color:red;">*</a></label>
                     <select name="district" id="fee" >
                         <option selected>不限</option>
                         <option >1000</option>
@@ -76,15 +76,9 @@
 
             </fieldset>
             <fieldset class="form-middle">
-                <div class="line-box">
-                    <label for="about">求租需求</label>
-                    <textarea name="about" id="about" cols="30" rows="10">亲，求租信息写的越好越容易租到房哦！</textarea>
-                </div>
-            </fieldset>
-            <fieldset class="form-middle">
-
-                <div class="line-box">
-                    <label for="district">联系方式</label>
+                
+				<div class="line-box">
+                    <label for="district">联系<a style="color:red;">*</a></label>
                     <select name="district" class="associate" id="" >
                         <option selected>微信号</option>
                         <option >手机号</option>
@@ -93,9 +87,12 @@
                     <p  class="info associate">推荐微信</p>
                     <input type="text" class="associate">
                 </div>
-
-  
-
+            </fieldset>
+            <fieldset class="form-middle">
+                <div class="line-box">
+                    <label for="about">求租需求<a style="color:red;">*</a></label>
+                    <textarea name="about" id="about" cols="30" rows="10">亲，求租信息写的越好越容易租到房哦！</textarea>
+                </div>
             </fieldset>
             <fieldset class="form-bottom">
                 <input class="seekhouse" type="submit" value="发布">
