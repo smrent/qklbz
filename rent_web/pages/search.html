@@ -28,8 +28,9 @@
             <ul>
                 <li><h3>手机号</h3></li>
                 <li><h3 class="phone-number">13545454454</h3></li>
-                <li><h4>认证：<span>保洁张师傅</span></h4></li>
-                <li><h4>来源：<span><a href="#">水木社区</a></span></h4></li>
+                <!--<li><h4>认证：<span>保洁张师傅</span></h4></li>-->
+                <!--<li><h4>来源：<span><a href="#">水木社区</a></span></h4></li>-->
+				<li><h4><a style="color:red;text-decoration:underline;" onclick="alert('请通过微信公众号或微博\'水木租房\'举报中介，核实后添加！')">中介举报</a>：<span>3999</span></h4></li>
             </ul>
         </div>
         <div class="info-box-right float">
@@ -51,23 +52,26 @@
             <span>评价:</span>
             <label><input name="comment" type="radio" value="" />很差 </label>
             <label><input name="comment" type="radio" value="" />较差 </label>
-            <label><input name="comment" type="radio" value="" />还行 </label>
+            <label><input name="comment" type="radio" value="" />靠谱 </label>
             <label><input name="comment" type="radio" value="" />推荐 </label>
             <label><input name="comment" type="radio" value="" checked/>力荐 </label>
-            <textarea name="comment" id="" cols="30" rows="10">写点评价吧~！</textarea>
+            <textarea name="comment" id="" cols="30" rows="10">您对该手机号持有人的点评~！请慎重填写！恶意评价将被关小黑屋！</textarea>
             <input type="submit" class="submit_comment" value="提交">
         </form>
     </div>
+	<br>
     <div class="comments section">
         <div>
             <div class="roomer-info">
+			    <!--
                 <div class="pic-wrapper ">
                     <img src="../pic_people/owner1.jpg" alt="XXX">
                     <div class="verify"><i class="fa fa-user-o"></i>已实名</div>
                 </div>
+				-->
                 <div class="star-box smID">
-                    <small>水木社区ID：</small>
-                    <small class="smID">高富帅</small>
+                    <small>IP：</small>
+                    <small class="smID">113.126.*.45</small>
                 </div>
                 <div class="star-box">
                     <small>评分：</small>
@@ -77,29 +81,33 @@
                     <div class="star "><i class="fa fa-star"></i></div>
                     <div class="star "><i class="fa fa-star"></i></div>
                 </div>
+				<br>
                 <div class="comment-box">
-                    <textarea name="comment" id="" cols="30" rows="3">不错不错~！~！</textarea>
+                    <textarea name="comment" id="" cols="30" rows="3" readonly>不错不错~！~！</textarea>
                 </div>
             </div>
             <div class="roomer-info">
+				<!--
                 <div class="pic-wrapper ">
                     <img src="../pic_people/owner1.jpg" alt="XXX">
                     <div class="verify"><i class="fa fa-user-o"></i>已实名</div>
                 </div>
+				-->
                 <div class="star-box smID">
-                    <small>水木社区ID：</small>
-                    <small class="smID">高富帅</small>
+                    <small>IP：</small>
+                    <small class="smID">113.126.*.46</small>
                 </div>
                 <div class="star-box">
-                    <small>评分：</small>
+                    <small style="float:left;">评分：</small>
                     <div class="star "><i class="fa fa-star"></i></div>
                     <div class="star "><i class="fa fa-star"></i></div>
                     <div class="star "><i class="fa fa-star"></i></div>
                     <div class="star "><i class="fa fa-star"></i></div>
                     <div class="star "><i class="fa fa-star"></i></div>
                 </div>
+				<br>
                 <div class="comment-box">
-                    <textarea name="comment" id="" cols="30" rows="3">不错不错~！~！</textarea>
+                    <textarea name="comment" id="" cols="30" rows="3" readonly>不错不错~！~！</textarea>
                 </div>
             </div>
         </div>
