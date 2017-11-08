@@ -65,11 +65,16 @@ div.body{
     display: inline-block;
     margin:auto;
 }
-.roomer-want a{
+.special{
     border:1px solid gray;
     background-color: aquamarine;
     border-radius: 3px 3px ;
     color:#111111;
+    display: block;
+    margin:auto;
+}
+.roomer-want a{
+
 }
 .roomer-info{
     overflow: hidden;
@@ -115,4 +120,25 @@ div.star{
 }
 .info-box ul li{
     width:90%;
+}
+
+/*assosiate*/
+.line-box{
+    padding: 15px 5%;
+
+}
+.connect{
+    padding:15px 0;
+}
+.line-box form select{
+    width:30%;
+    height:2em;
+}
+.line-box form input{
+    width:60%;
+    height:2em;
+}
+.line-box form div{
+    width:35%;
+    margin-top: 10px;
 }
