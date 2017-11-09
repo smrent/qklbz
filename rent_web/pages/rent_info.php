@@ -210,8 +210,25 @@
 		}
     ?>
 		
-    
-    
+    <hr>
+    <div class="connect">
+        <div class="roomer-want small">想租的请留下微信号，方便相互联系</div>
+        <div class="line-box">
+            <form action="">
+                <select name="district" class="associate" id="" >
+                    <option selected>微信号</option>
+                    <option >手机号</option>
+                    <!--添加候选项-->
+                </select>
+                <input type="text" class="associate">
+                <div class="special">
+                    <a href="#">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
     <?php
     $rs=$mysqli->query("SELECT * FROM `rent_want` WHERE house_rent_id = '$house_rent_id'");
 		if ($rs){//$rs为true才去取
@@ -221,11 +238,10 @@
 		//当前观看页面的user_id
 		$wechat_openid='jikdfjkdfk';
     ?>
-    <hr>
+
     <br>
     <div class="roomer-want"><!--自己不能想租自己的房子 自己也不能关注自己的求租-->
         <div>想租该房子的房客<? echo $numrows; ?></div>
-        <a href="../php/AddRentWant.php?wechat_openid=<? echo $wechat_openid ?>&house_rent_id=<? echo $house_rent_id ?>&owner_id=<? echo $user_id ?>">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     </div>
     
     <div id="more">
