@@ -1,6 +1,6 @@
 ﻿<?php
-require_once('connect.php');
-
+//require_once('connect.php');
+$mysqli = new mysqli('localhost', 'root', '123456', 'demo');
 $last = $_POST['last'];
 $amount = $_POST['amount'];
 //echo "<script>alert('111');</script>";
@@ -15,25 +15,26 @@ $house_rent_id=$_GET['house_rent_id'];
 
 //$rs0=mysql_query("select max(ID) from pic_sheji");
 //$maxid = mysql_fetch_array($rs0);
-$query=mysql_query("select * from rent_want where house_rent_id = '$house_rent_id' order by id desc limit $last,$amount");
-while ($row=mysql_fetch_array($query)) {	
+$sql="select * from rent_want where house_rent_id = '$house_rent_id' order by id desc limit $last,$amount";
+$result=$mysqli->query($sql);
+while ($row=$result->fetch_array(MYSQLI_ASSOC)) {
 	$user_id=$row['user_id'];
 	$house_rent_id=$row['house_rent_id'];
 	$date=date('m-d H:i',$row['addtime']);
 	
 	$sql = "SELECT * FROM user where id='$user_id'";
-  $rst = mysql_query($sql); 
-	while ($row = mysql_fetch_array($rst)){
+  $rst=$mysqli->query($sql);
+	while ($row = $rst->fetch_array(MYSQLI_ASSOC)){
 		$wechat=$row["wechat"];
 		$status=$row["status"];
-		$sm_id=$row["sm_id"];
+		$mobile=$row["mobile"];
 		$university=$row["university"];
 		$industry=$row["industry"];
 		$star_sum=0;
 		if($status != ""){
 			$star_sum++;
 		}
-		if($sm_id != ""){
+		if($mobile != ""){
 			$star_sum++;
 		}
 		if($university != ""){
@@ -46,8 +47,8 @@ while ($row=mysql_fetch_array($query)) {
 		if($status==""){
 			$status="未填写";
 		}
-		if($sm_id==""){
-			$sm_id="未填写";
+		if($mobile==""){
+			$mobile="未填写";
 		}
 		if($university==""){
 			$university="未填写";
@@ -59,7 +60,7 @@ while ($row=mysql_fetch_array($query)) {
 
 	$sayList[] = array(
 	  'wechat'=>$wechat,
-	  'sm_id'=>$sm_id,
+	  'mobile'=>$mobile,
 	  'university'=>$university,
 	  'industry'=>$industry,
 	  'status'=>$status,
