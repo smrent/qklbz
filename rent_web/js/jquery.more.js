@@ -81,7 +81,7 @@
                     	  		//alert(key);
                     	  		var href="houseSeek_info.php?house_seek_id="+value;
 	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
-	                    	  }else if(key == 'sm_id'){//水木社区ID
+	                    	  }else if(key == 'mobile'){//水木社区ID
                     	  		//alert(value);
                     	  		if(value == "未填写"){
                     	  			if(t.find('.'+key)) t.find('.'+key).html(value);
