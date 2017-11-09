@@ -213,11 +213,11 @@
     
     
     <?php
-    $rs=$mysqli->query("SELECT count(*) FROM `rent_want` WHERE house_rent_id = '$house_rent_id'");
+    $rs=$mysqli->query("SELECT * FROM `rent_want` WHERE house_rent_id = '$house_rent_id'");
 		if ($rs){//$rs为true才去取
-			$myrow = $rs->fetch_array(MYSQLI_ASSOC);
-			$numrows=$myrow[0];
+			$numrows=mysqli_num_rows($rs);
 		}
+		//mysqli_free_result($rs);
 		//当前观看页面的user_id
 		$wechat_openid='jikdfjkdfk';
     ?>
@@ -247,8 +247,8 @@
 		                  <small class="smID"><span class="wechat"></span></small>
 		              </div>
 		              <div>
-		                  <small style="color:#999;">水木ID：</small>
-		                  <small class="smID"><span class="sm_id"></span></small>
+		                  <small style="color:#999;">手机号：</small>
+		                  <small class="smID"><span class="mobile"></span></small>
 		              </div>
 		              <div>
 		                  <small style="color:#999;">毕业学校：</small>
