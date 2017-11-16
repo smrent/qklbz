@@ -100,13 +100,13 @@ form label{
     padding-bottom:0;
 }
 .form-middle label,p{
-    width:25%;
+    width:23%;
 }
 .form-middle select{
     width:35%;
 }
 .form-middle label{
-    text-align: left;
+    text-align: center;
 }
 .line-box{
     padding: 15px 5%;
@@ -137,7 +137,17 @@ form label{
     width:80%;
     height: 3em;
 }
-
+.btn.small-btn{
+    width:15%;
+    height: 2.5em;
+}
+.small-seekhouse{
+    border: 1px solid #e57633;
+    border-radius: 4px 4px;
+    background-color: #fb962a;
+    width:15%;
+    height: 2.5em;
+}
 
 input.associate{
     display: block;
@@ -151,4 +161,25 @@ input.associate{
 }
 .rent_bgcolor{
     background-color:rgba(91, 165, 249, 0.2);
+}
+
+.center-title{
+    width:50%;
+    margin:15px auto;
+    text-align: center;
+    color: gray;
+}
+
+/*search-form*/
+.search-box fieldset{
+    padding:0 0 15px 0;
+}
+.search-bar{
+    height:1.5em;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+.info input{
+    vertical-align: bottom;
 }

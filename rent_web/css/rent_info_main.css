@@ -131,15 +131,16 @@ div.star{
     padding:15px 0;
 }
 .line-box form select{
-    width:30%;
+    width:23%;
     height:2em;
 }
 .line-box form input{
-    width:60%;
+    width:40%;
     height:2em;
 }
 .line-box form div{
-    width:35%;
+    display: inline-block;
+    width:30%;
     margin-top: 10px;
 }
 .small{
