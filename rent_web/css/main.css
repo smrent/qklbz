@@ -57,6 +57,11 @@ header{
 	margin:0 12%;
     text-align: center;
 }
+.total_views{
+    color:green;
+    font-size:10px;
+    padding:0;
+}
 /*---------------------------footer-------------------------*/
 footer{
     overflow: hidden;
@@ -90,7 +95,7 @@ footer{
 /*-----------------------body--------------------------*/
 .body{
     width: 98%;
-    margin: 18% 0 18% 2%;
+    margin: 21% 0 18% 2%;
 }
 div .content-box{
     overflow: hidden;

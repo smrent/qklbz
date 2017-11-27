@@ -63,10 +63,10 @@
             var root = target       
             //alert(root.attr('id')) //id是more
             var counter = 0;
-            var user_wechat = 0;//声明全局user_wechat
-            var user_mobile = 0;//声明全局user_mobile
-			var house_rent_id = 0;//声明全局user_mobile
-			var house_seek_id = 0;//声明全局user_mobile
+            var user_wechat;//声明全局user_wechat
+            var user_mobile;//声明全局user_mobile
+			var user_house_rent_id;//声明全局house_rent_id
+			var user_house_seek_id;//声明全局house_seek_id
             if(data){
                 $(data).each(function(){//对于每个匹配的元素所要执行的函数
                     counter++
@@ -76,67 +76,63 @@
                     	  	if(key == 'wechat'){//用户微信号
                     	  		//alert(value);
                     	  		user_wechat=value;
-                    	  		//alert(user_wechat);
-                   	  			if(t.find('.'+key)) t.find('.'+key).html(value);
+								if(user_wechat){//wechat不为空，赋值	
+									if(t.find('.'+key)) t.find('.'+key).html(value);
+								}else{//wechat为空，不显示
+									if(t.find('.'+'user_wechat')) t.find('.'+'user_wechat').attr("style","display:none;");
+								}
                     	  		//t.find('.'+'user_wechat').attr('src','');
-	                    	  }else if(key == 'mobile'){//用户手机号
+	                    	}else if(key == 'mobile'){//用户手机号
                     	  		//alert(value);
                     	  		user_mobile=value;
-                   	  			if(t.find('.'+key)) t.find('.'+key).html(value);
-	                    	  }
-                    	  	if(key == 'room-pic' || key == 'headimg'){//房源照片 用户头像
+								if(user_mobile){//mobile不为空，赋值	
+									if(t.find('.'+key)) t.find('.'+key).html(value);
+								}else{//mobile为空，不显示
+									if(t.find('.'+'user_mobile')) t.find('.'+'user_mobile').attr("style","display:none;");
+								}
+	                    	}else if(key == 'house_rent_id'){//首页出租house_rent_id
+                    	  		//alert(value);
+								user_house_rent_id=value;
+								//alert(house_rent_id);
+                    	  		//if(t.find('.'+key)) t.find('.'+key).html(value);
+	                    	}else if(key == 'house_seek_id'){//次页求租house_seek_id
+                    	  		//alert(key);
+								user_house_seek_id=value;
+                    	  		//if(t.find('.'+key)) t.find('.'+key).html(value);
+	                    	}else if(key == 'room-pic' || key == 'headimg'){//房源照片 用户头像
                     	  		//alert(key);
 	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('src',value);
-	                    	  }else if(key == 'house_rent_id'){//首页出租house_rent_id
-                    	  		//alert(key);
-								house_rent_id=value;
-                    	  		if(t.find('.'+key)) t.find('.'+key).html(value);
-	                    	  }else if(key == 'house_seek_id'){//次页求租house_seek_id
-                    	  		//alert(key);
-								house_seek_id=value;
-                    	  		if(t.find('.'+key)) t.find('.'+key).html(value);
-	                    	  }else if(key == 'content-box'){//出租详情链接
-                    	  		//alert(key);
-                    	  		var href="pages/rent_info.php?house_rent_id="+value;
-	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
-	                    	  }else if(key == 'content-box-houseSeek'){//求租详情链接
-                    	  		//alert(key);
-                    	  		var href="houseSeek_info.php?house_seek_id="+value;
-	                    	  	if(t.find('.'+key)) t.find('.'+key).attr('href',href);
-	                    	  }else if(key == 'user_rent_num'){//用户出租房屋数目
-                    	  		//alert(value);
+	                    	}else if(key == 'user_rent_num'){//用户出租房屋数目
+                    	  		//alert(house_rent_id);
                     	  		if(value == 0){
                     	  			if(t.find('.'+key)) t.find('.'+key).html(value);
                     	  		}else{
-                    	  			//alert(value);
-                    	  			if(user_wechat != "未填写"){
-										var href="../pages/user_rent_wechat.php?user_wechat="+user_wechat+"&house_seek_id="+house_seek_id;
+                    	  			//alert(user_mobile);
+                    	  			if(user_wechat){
+										var href="../pages/user_rent_wechat.php?user_wechat="+user_wechat+"&user_house_rent_id="+user_house_rent_id;
                     	  				var innerhtml="<a style='color:blue;text-decoration:underline;' href='"+href+"'>"+value+"</a>";
-                    	  				if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
-                    	  			}else if(user_mobile != "未填写"){
-                    	  				var href="../pages/user_rent_mobile.php?user_mobile="+user_mobile+"&house_seek_id="+house_seek_id;;
+                    	  			}else if(user_mobile){
+                    	  				var href="../pages/user_rent_mobile.php?user_mobile="+user_mobile+"&user_house_rent_id="+user_house_rent_id;;
                     	  				var innerhtml="<a style='color:blue;text-decoration:underline;' href='"+href+"'>"+value+"</a>";
-                    	  				if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
-                    	  			}  	
-                    	  		}
-	                    	  }else if(key == 'user_seek_num'){//用户求租房屋数目
-                    	  		//alert(value);
-                    	  		if(value == 0){
-                    	  			if(t.find('.'+key)) t.find('.'+key).html(value);
-                    	  		}else{
-                    	  			//alert(value);
-                    	  			if(user_wechat != "未填写"){
-                    	  				var href="../pages/user_seek_wechat.php?user_wechat="+user_wechat+"&house_rent_id="+house_rent_id;;
-                    	  				var innerhtml="<a style='color:blue;text-decoration:underline;' href='"+href+"'>"+value+"</a>";
-                    	  				if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
                     	  			}
-                    	  			if(user_mobile != "未填写"){
-                    	  				var href="../pages/user_seek_mobile.php?user_mobile="+user_mobile+"&house_rent_id="+house_rent_id;;
-                    	  				var innerhtml="<a style='color:blue;text-decoration:underline;' href='"+href+"'>"+value+"</a>";
-                    	  				if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
-                    	  			}  	
+									if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
                     	  		}
-	                    	  }else if(key == 'star_sum'){//几星
+	                    	}else if(key == 'user_seek_num'){//用户求租房屋数目
+                    	  		//alert(value);
+                    	  		if(value == 0){
+                    	  			if(t.find('.'+key)) t.find('.'+key).html(value);
+                    	  		}else{
+                    	  			//alert(value);
+                    	  			if(user_wechat){
+                    	  				var href="../pages/user_seek_wechat.php?user_wechat="+user_wechat+"&user_house_seek_id="+user_house_seek_id;;
+                    	  				var innerhtml="<a style='color:blue;text-decoration:underline;' href='"+href+"'>"+value+"</a>";
+                    	  			}else if(user_mobile){
+                    	  				var href="../pages/user_seek_mobile.php?user_mobile="+user_mobile+"&user_house_seek_id="+user_house_seek_id;;
+                    	  				var innerhtml="<a style='color:blue;text-decoration:underline;' href='"+href+"'>"+value+"</a>";
+                    	  			}
+									if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
+                    	  		}
+	                    	}else if(key == 'star_sum'){//几星
                     	  		//alert(value);   
                     	  		if(value=='0'){
 	                    	  		var innerhtml="<div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div><div class='star'><i class='fa fa-star-o'></i></div>";
@@ -151,10 +147,9 @@
 	                    	  		var innerhtml="<div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div><div class='star'><i class='fa fa-star'></i></div>";
 	                    	  	}
 	                    	  	if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
-	                    	  }else{
-	                    	  	//alert(key);
-                    	  		if(t.find('.'+key)) t.find('.'+key).html(value);
-	                    	  }  
+	                    	}else{
+								if(t.find('.'+key)) t.find('.'+key).html(innerhtml);
+							}
                     	  }
                     	            
                         

@@ -224,6 +224,9 @@
                 <div class="special">
                     <a href="#">我也想租！<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </div>
+                <input name="sub" id= "sub" type="submit" value="我也想租" class='btn' style="width:80px;">
+
+
             </form>
 
         </div>
