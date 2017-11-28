@@ -79,6 +79,9 @@ div.body{
     border:none;
     width:60px;
 }
+.associate{
+    border: 1px solid gray;
+}
 .roomer-want a{
 
 }
