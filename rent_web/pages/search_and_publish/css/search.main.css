@@ -8,6 +8,8 @@ html,body{
 }
 h2{
     display: inline-block;
+    width: 50%;
+    float: left;
 }
 label{
     vertical-align: top;
@@ -32,8 +34,9 @@ header {
 }
 .nav-change {
     width: 25%;
-    float: right;
+    float: left;
     text-align: right;
+    display: inline-block;
 }
 div.nav-change a{
     color:red
@@ -100,13 +103,16 @@ form label{
     padding-bottom:0;
 }
 .form-middle label,p{
-    width:23%;
+    width:20%;
 }
 .form-middle select{
     width:35%;
 }
 .form-middle label{
-    text-align: center;
+    text-align: left;
+}
+.form-middle label.big,.big{
+    width:25%;
 }
 .line-box{
     padding: 15px 5%;
@@ -151,6 +157,7 @@ form label{
 
 input.associate{
     display: block;
+    border: 1px solid #CCCCCC;
     padding: 5px;
     width: 57%;
     margin: 15px 0 15px 32%;
@@ -175,6 +182,8 @@ input.associate{
     padding:0 0 15px 0;
 }
 .search-bar{
+    width:50%;
+    min-width: 140px;
     height:1.5em;
     line-height: 1.5em;
     font-size: 1em;
