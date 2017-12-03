@@ -183,3 +183,9 @@ input.associate{
 .info input{
     vertical-align: bottom;
 }
+
+/*textarea*/
+textarea{
+    resize: none;
+    width: 80%;
+}
