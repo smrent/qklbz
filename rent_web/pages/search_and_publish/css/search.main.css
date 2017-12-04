@@ -105,6 +105,10 @@ form label{
 .form-middle label,p{
     width:20%;
 }
+
+.form-middle p{
+    width:30%;
+}
 .form-middle select{
     width:35%;
 }
@@ -160,7 +164,7 @@ input.associate{
     border: 1px solid #CCCCCC;
     padding: 5px;
     width: 57%;
-    margin: 15px 0 15px 32%;
+    margin: 15px 0 0px 27%;
 }
 
 .seek_bgcolor{
