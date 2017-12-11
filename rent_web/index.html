@@ -7,15 +7,15 @@
     <title>水木租房</title>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet">
-		<!--move jquery.min.js to here and add jquery.more.js-->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.more.js"></script>
-		<script type="text/javascript">
-		$(function(){
-			$('#more').more({'address': 'php/data.php'})
-			//alert('111');
-		});
-		</script>
+    <!--move jquery.min.js to here and add jquery.more.js-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.more.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#more').more({'address': 'php/data.php'})
+            //alert('111');
+        });
+    </script>
 </head>
 <body>
 
@@ -30,7 +30,7 @@
     <div class="nav-btn nav-logo">
         <img class="logo" src="images/logo.jpg" alt="水木租房">
         <!--如果需要包裹浏览量数据，依然使用span标签-->
-        <p class="total_views" >浏览：7284</p>
+        <p class="total_views">浏览：7284</p>
     </div>
     <!--发布信息跳转-->
     <div class="nav-btn nav-publish">
@@ -40,52 +40,61 @@
 </header>
 
 <div class=" body">
-    <!--租房信息-->
-    <div class="phone-info">
-        <i class="fa fa-1x fa-phone"></i> <!--手机的图标，如果不需要直接删除该行即可-->
-        <span>手机号：12312312312的求租信息</span><!--用span包裹手机号-->
-    </div>
+
     <div id="more">
         <div class="single_item"><!--onclick="alert(this.innerHTML);"-->
-					<!--<a href="pages/rent_info.html" class="content-box">-->
-					<a class="content-box">
-						<!--房间图片 float-->
-		        <div class="pic-wrapper float-left">
-		            <img class="room-pic" alt="">
-		        </div>
-		        <!--房源标题 float-->
-        		<div class="content-wrapper float-left">
-        				<h4><div class="title"></div></h4>
-        				<!--房间属性简介 block 垂直排列-->
-		            <div class="abstract">
-		                <ul class="room-info">
-		                    <li id="district"><div class="district"></div></li>
-		                    <li id="house-type" class="text-center"><div class="room_type"></div></li>
-		                    <li id="rent-type" class="text-right"><div class="rent_type"></div></li>
-		                </ul>
-		            </div>
-		            <div class="state">
-	                <ul class="state-info">
-	                    <!--房源状态描述-->
-	                    <li>
-	                        <i class="fa fa-eye" aria-hidden="true"></i>
-	                        <span id="watcher"><span class="view"></span></span>
-	                    </li>
-	                    <li class="text-center">
-	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-	                        <span id="want"><span class="want"></span></span>
-	                    </li>
-	                    <li id="price" class="text-right"><div class="price"></div></li>
-	                </ul>
-            		</div>
-        		</div>
-					</a>
-					<hr>
+            <!--<a href="pages/rent_info.html" class="content-box">-->
+            <a class="content-box">
+                <!--房间图片 float-->
+                <!--<div class="pic-wrapper float-left">-->
+                    <!--<img class="room-pic" alt="">-->
+                <!--</div>-->
+
+                <!--图片不再放到img标签里了，直接作为div的背景图片，只需要修改这个div的属性background-image的url就可以应用图片-->
+                <div class="pic-wrapper float-left" style="padding-bottom: 30%;
+                background-size: 100% 100%;background-image: url(../images/cover_img/东城.jpg);">
+                </div>
+                <!--房源标题 float-->
+                <div class="content-wrapper float-left">
+                    <h4>
+                        <div class="title"></div>
+                    </h4>
+                    <!--房间属性简介 block 垂直排列-->
+                    <div class="abstract">
+                        <ul class="room-info">
+                            <li id="district">
+                                <div class="district"></div>
+                            </li>
+                            <li id="house-type" class="text-center">
+                                <div class="room_type"></div>
+                            </li>
+                            <li id="rent-type" class="text-right">
+                                <div class="rent_type"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="state">
+                        <ul class="state-info">
+                            <!--房源状态描述-->
+                            <li>
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <span id="watcher"><span class="view"></span></span>
+                            </li>
+                            <li class="text-center">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                <span id="want"><span class="want"></span></span>
+                            </li>
+                            <li id="price" class="text-right">
+                                <div class="price"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <hr>
         </div>
         <a href="javascript:;" class="get_more" style="color:#007bc4/*#424242*/; text-decoration:none;outline: none;">::more::</a>
-  	</div> 
-    
-    
+    </div>
 
 
 </div>
@@ -106,16 +115,16 @@
         </a>
     </div>
     <!--<div class="nav-btn fo-nav">-->
-        <!--<a href="pages/my_info.html" class="">-->
-            <!--<i class="fa fa-user-circle fa-2x  " aria-hidden="true"></i>-->
-            <!--<div class="label">我的</div>-->
-        <!--</a>-->
+    <!--<a href="pages/my_info.html" class="">-->
+    <!--<i class="fa fa-user-circle fa-2x  " aria-hidden="true"></i>-->
+    <!--<div class="label">我的</div>-->
+    <!--</a>-->
     <!--</div>-->
     <!--<div class="nav-btn fo-nav">-->
-        <!--<a href="pages/verity_info.html" class="">-->
-            <!--<i class="fa fa-key fa-2x  " aria-hidden="true"></i>-->
-            <!--<div class="label">验证</div>-->
-        <!--</a>-->
+    <!--<a href="pages/verity_info.html" class="">-->
+    <!--<i class="fa fa-key fa-2x  " aria-hidden="true"></i>-->
+    <!--<div class="label">验证</div>-->
+    <!--</a>-->
     <!--</div>-->
 
 
