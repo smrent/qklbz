@@ -227,14 +227,12 @@
     <div id="more">
         <div class="single_item"><!--onclick="alert(this.innerHTML);"-->
 	        <div class="roomer-info">
-	            <div class="pic-wrapper ">
-	                <img src="../pic_people/owner1.jpg" alt="XXX" style="width:70%;height:70%;">
-	                <!--<div class="verify"><i class="fa fa-user-o"></i></div>-->
+	            <div class="image-pic-float">  <!--将用户头像添加在这个div的背景图片中！-->
 	                <div class="verify">
-	                <div class="star-box">
-											<span class="star_sum"></span>
-		              </div>
-		              </div>
+	                    <div class="star-box">
+							<span class="star_sum"></span>
+		                </div>
+		            </div>
 	            </div>
 	            
 	            <div class="star-box smID">

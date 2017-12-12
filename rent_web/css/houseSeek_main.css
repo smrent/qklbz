@@ -18,6 +18,7 @@ div.pic-wrapper {
 }
 .content-box-houseSeek{
     min-height:128px;
+    width:100%
 }
 
 /*James add for infinite loading*/

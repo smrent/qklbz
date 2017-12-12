@@ -108,7 +108,8 @@ div.body{
     overflow: hidden;
 }
 .roomer-info>div{
-    padding:2px;
+    padding-left:2px;
+    padding-right:2px;
     margin: 2px;
 }
 
@@ -184,4 +185,12 @@ div.star{
 }
 .small{
     font-size: 13px;
+}
+
+.roomer-info>.image-pic-float{
+    margin-bottom: 27px;
+    height: 0;
+    text-align: center;
+    padding-top: 30%;
+    padding-bottom: 0;
 }
