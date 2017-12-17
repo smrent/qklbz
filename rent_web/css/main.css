@@ -105,6 +105,8 @@ div .content-box{
 .pic-wrapper-float{
     padding-bottom: 30%;
     background-size: 100% 100%;
+    width: 30%;
+    display: inline-block;
     /*background-image: url(../images/cover_img/等待加载图片.jpg); 这个地方可以加入一个当图片正在加载时的效果图片*/
 }
 .content-box:hover,content-box:active{

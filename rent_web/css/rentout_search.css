@@ -1,0 +1,23 @@
+.red{
+    color:red;
+}
+div.content-box{
+    width: 100%;
+    display: block;
+}
+.abstract ul li{
+    width: 23%;
+    /*padding: 2%;*/
+    text-align: center;
+}
+.pic-wrapper-float{
+    float: left;
+}
+.room-desc-abs{
+    width: 68%;
+    padding: 0 1% 1% 1%;
+    display: inline-block;
+}
+.room-desc-abs p{
+    font-size: 0.8em;
+}
