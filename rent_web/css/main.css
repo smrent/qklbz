@@ -103,6 +103,7 @@ div .content-box{
     width:100%
 }
 .pic-wrapper-float{
+	float: left;
     padding-bottom: 30%;
     background-size: 100% 100%;
     width: 30%;
