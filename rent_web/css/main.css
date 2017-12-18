@@ -31,6 +31,7 @@ header{
     width:100%;
     top:0;
     background-color: white;
+    z-index: 1000;
 }
 .nav-btn{
     float: left;
