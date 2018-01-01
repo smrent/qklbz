@@ -112,7 +112,8 @@ div .content-box{
     /*background-image: url(../images/cover_img/等待加载图片.jpg); 这个地方可以加入一个当图片正在加载时的效果图片*/
 }
 .content-box:hover,content-box:active{
-    background-color: gainsboro;
+    /*background-color: gainsboro;*/
+    /*修复点击后的灰色责遮罩*/
 }
 .content-wrapper{
     width:67%;
