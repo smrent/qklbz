@@ -101,7 +101,12 @@ footer{
 div .content-box{
     overflow: hidden;
     color:black;
-    width:100%
+    width:100%;
+    padding:15px 0;
+}
+
+.first-content-box.content-box{
+    padding-top: 0;
 }
 .pic-wrapper-float{
 	float: left;

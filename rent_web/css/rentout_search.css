@@ -29,8 +29,11 @@ div.content-box{
     width:68%;
     position: absolute;
     right:0;
-    bottom:0;
+    bottom: 15px;
     text-align: center;
+}
+a.content-box{
+    padding: 0 0 15px 0;
 }
 .bottom-abstract ul li{
     width: 30%;
