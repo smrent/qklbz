@@ -1,126 +1,560 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ê∞¥Êú®ÁßüÊàø</title>
+    <link rel="icon" href="images/icon_img/leaf.png" type="image/x-icon">
+		<link rel="shortcut icon" href="images/icon_img/leaf.png" type="image/x-icon">
+    <title>ÀÆƒæ◊‚∑ø◊”</title>
+    <meta name="author" content="smzfz.com">
+		<meta name="Copyright" content="smzfz.com">
+		<meta name="Keywords" content="smzfz.com-ÀÆƒæ◊‚∑ø◊”-∑ø∂´÷±◊‚-Œﬁ÷–ΩÈ∑—-µÿ«‡∫œ◊‚…Ò∆˜">   
+		<meta name="Description" content="ÀÆƒæ◊‚∑ø◊”-smzfz.com£¨ «“ª∏ˆ‘¥◊‘ÀÆƒæ…Á«¯µƒŒﬁ÷–ΩÈ◊‚∑ø–°≥Ã–Ú£¨÷˜¥Ú∑ø∂´÷±◊‚£¨µÿ«‡∫œ◊‚°£Ãÿµ„£∫øø∆◊£°">   
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet">
-    <!--move jquery.min.js to here and add jquery.more.js-->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.more.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('#more').more({'address': 'php/data.php'})
-            //alert('111');
-        });
-    </script>
+		<!--move jquery.min.js to here and add jquery.more.js-->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.more.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$('#more').more({'address': 'php/data.php'})
+			//alert('111');
+		});
+		</script>
 </head>
-<body>
+<body style="">
 
 <header>
-    <!--ÊêúÁ¥¢ÈìæÊé•Ë∑≥ËΩ¨-->
+    <!--À—À˜¡¥Ω”Ã¯◊™-->
     <div class="nav-btn nav-search">
-        <a href="#">
+        <a href="pages/search_and_publish/rentout_search.html">
             <i class="fa fa-search fa-2x text-primary " aria-hidden="true"></i>
         </a>
     </div>
     <!--LOGO-->
     <div class="nav-btn nav-logo">
-        <img class="logo" src="images/logo.jpg" alt="Ê∞¥Êú®ÁßüÊàø">
-        <!--Â¶ÇÊûúÈúÄË¶ÅÂåÖË£πÊµèËßàÈáèÊï∞ÊçÆÔºå‰æùÁÑ∂‰ΩøÁî®spanÊ†áÁ≠æ-->
-        <p class="total_views">ÊµèËßàÔºö7284</p>
-    </div>
-    <!--ÂèëÂ∏É‰ø°ÊÅØË∑≥ËΩ¨-->
+        <img class="logo" src="images/logo.jpg" alt="ÀÆƒæ◊‚∑ø◊”">
+        <p class="total_views">‰Ø¿¿£∫9675</p>    </div>
+    <!--∑¢≤º–≈œ¢Ã¯◊™-->
     <div class="nav-btn nav-publish">
-        <a href="#"><i class="fa fa-plus-circle fa-2x text-success " aria-hidden="true"></i>
+         <a href="pages/search_and_publish/rentout_publish.html"><i class="fa fa-plus-circle fa-2x text-success " aria-hidden="true"></i>
         </a>
     </div>
 </header>
 
 <div class=" body">
-
+    <!--◊‚∑ø–≈œ¢-->
     <div id="more">
-        <div class="single_item"><!--onclick="alert(this.innerHTML);"-->
-            <!--<a href="pages/rent_info.html" class="content-box">-->
-            <a class="content-box">
-                <!--ÂõæÁâá‰∏çÂÜçÊîæÂà∞imgÊ†áÁ≠æÈáå‰∫ÜÔºåÁõ¥Êé•‰Ωú‰∏∫divÁöÑËÉåÊôØÂõæÁâáÔºåÂè™ÈúÄË¶Å‰øÆÊîπËøô‰∏™divÁöÑÂ±ûÊÄßbackground-imageÁöÑurlÂ∞±ÂèØ‰ª•Â∫îÁî®ÂõæÁâá-->
-                <div class="pic-wrapper-float" ></div>
-                <!--ÊàøÊ∫êÊ†áÈ¢ò float-->
-                <div class="content-wrapper float-left">
-                    <h4>
-                        <div class="title"></div>
-                    </h4>
-                    <!--ÊàøÈó¥Â±ûÊÄßÁÆÄ‰ªã block ÂûÇÁõ¥ÊéíÂàó-->
-                    <div class="abstract">
-                        <ul class="room-info">
-                            <li id="district">
-                                <div class="district"></div>
-                            </li>
-                            <li id="house-type" class="text-center">
-                                <div class="room_type"></div>
-                            </li>
-                            <li id="rent-type" class="text-right">
-                                <div class="rent_type"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="state">
-                        <ul class="state-info">
-                            <!--ÊàøÊ∫êÁä∂ÊÄÅÊèèËø∞-->
-                            <li>
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                <span id="watcher"><span class="view"></span></span>
-                            </li>
-                            <li class="text-center">
-                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                                <span id="want"><span class="want"></span></span>
-                            </li>
-                            <li id="price" class="text-right">
-                                <div class="price"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <hr>
-        </div>
-        <a href="javascript:;" class="get_more" style="color:#007bc4/*#424242*/; text-decoration:none;outline: none;">::more::</a>
-    </div>
+        <div style="display: none;"><div class="single_item"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=45&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/≥Ø—Ù.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">µÿµ„∞À¿Ô«≈µÿÃ˙’æ£¨”…”⁄±æ»À∂‡◊‚¡À“ª∏ˆ‘¬£¨œ÷‘⁄Ω´≥ˆ◊‚“ª∏ˆ‘¬</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">≥Ø—Ù</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">µ•º‰</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">◊™◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C45</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">0</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">500~1k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div></div>
+        <div class="single_item" id="more_element_1"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=40&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;http://www.smzfz.com/images/house_img/C40.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title"><i class="fa fa-arrow-up" aria-hidden="true" style="color:red;"></i><span>ø∆ºº¥Û—ß¿œ ¶£¨–£ƒ⁄¥Û¡Ωæ”—∞øø∆◊◊‚øÕ</span></div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">∫£µÌ</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">∂˛ “</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">’˚◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C40</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">1</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">7~7.5k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_2"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=38&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/Œ˜≥«.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title"><i class="fa fa-arrow-up" aria-hidden="true" style="color:red;"></i><span>38µ•º‰ | ≥ˆ◊‚¥ŒŒ‘’Ê µ ÷ª˙≈ƒ’’ ≥Øƒœæ´◊∞–ﬁ∞¸ŒÔ“µ</span></div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">Œ˜≥«</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">∂˛ “</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">’˚◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C38</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">4</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">1~1.5k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_3"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=52&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/∂´≥«.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">ÃÂ√Êµƒ¡Ï∞¸»Î◊°</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">∂´≥«</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">¥≤Œª</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">’˚◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C52</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">0</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">100“‘œ¬</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_4"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=51&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/∫£µÌ.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">≤‚ ‘</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">∫£µÌ</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">»˝ “</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">’˚◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C51</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">0</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">2.5~3k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_5"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=50&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/∂´≥«.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">∂´≥«“ªæ” “£¨≤‚ ‘</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">∂´≥«</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">¥≤Œª</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">’˚◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C50</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">0</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">2.5~3k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_6"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=49&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/≥Ø—Ù.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">≥Ø—Ù Æ∫≈œﬂ“ªæ”£¨Ωˆπ©À—À˜ ‘”√£°ª∂”≠º”»ÎÀÆƒæ◊‚∑øƒ⁄≤‚»∫</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">≥Ø—Ù</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">“ª “</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">’˚◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C49</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">2</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">4.5~5k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_7"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=48&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/∫£µÌ.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">ŒÂµ¿ø⁄µÿÃ˙’æ£¨ø…∂Ã◊‚‘¬∏∂£¨¡‡∞¸»Î◊°£¨»˝º“∫œ◊‚£¨Œﬁ∏Ù∂œ£¨æ´</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">∫£µÌ</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">»˝ “</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">’˚◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C48</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">0</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">2.5~3k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_8"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=47&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/∫£µÌ.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">À´«Â¬∑14∫≈‘∫£¨º“ Ù¬•∞≤»´∞≤æ≤£¨¥Û¥ŒŒ‘µƒ“ª∏ˆ¥≤Œª£¨√ø‘¬√ø</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">∫£µÌ</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">¥≤Œª</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">∫œ◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C47</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">0</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">1~1.5k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_9"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=46&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/≤˝∆Ω.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">±±æ©◊‚∑ø◊™◊‚ µÿÃ˙8∫≈œﬂªÿ¡˙π€∂´¥ÛΩ÷≤Ω––6∑÷÷”µΩº“ ∑ø◊‚</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">≤˝∆Ω</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">µ•º‰</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">◊™◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C46</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">1</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">1~1.5k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_10"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<a class="content-box" href="pages/rent_info.php?house_rent_id=45&amp;from=index">
+						<!--∑øº‰Õº∆¨ float-->
+						<!--
+				        <div class="pic-wrapper float-left">
+				            <img class="room-pic" alt="">
+				        </div>
+						-->
+				 		<!--Õº∆¨≤ª‘Ÿ∑≈µΩimg±Í«©¿Ô¡À£¨÷±Ω”◊˜Œ™divµƒ±≥æ∞Õº∆¨£¨÷ª–Ë“™–ﬁ∏ƒ’‚∏ˆdivµƒ Ù–‘background-imageµƒurlæÕø…“‘”¶”√Õº∆¨-->
+            <!--
+            <div class="pic-wrapper float-left" style="padding-bottom: 30%;background-size: 100% 100%;background-image: url(../images/cover_img/∂´≥«.jpg);">
+            </div>
+            -->
+            <div class="pic-wrapper-float" style="background-image: url(&quot;../images/cover_img/≥Ø—Ù.jpg&quot;);"></div>
+		        <!--∑ø‘¥±ÍÃ‚ float-->
+        		<div class="content-wrapper float-left">
+        				<h4><div class="title">µÿµ„∞À¿Ô«≈µÿÃ˙’æ£¨”…”⁄±æ»À∂‡◊‚¡À“ª∏ˆ‘¬£¨œ÷‘⁄Ω´≥ˆ◊‚“ª∏ˆ‘¬</div></h4>
+        				<!--∑øº‰ Ù–‘ºÚΩÈ block ¥π÷±≈≈¡–-->
+		            <div class="abstract">
+		                <ul class="room-info">
+		                    <li id="district"><div class="district">≥Ø—Ù</div></li>
+		                    <li id="house-type" class="text-center"><div class="room_type">µ•º‰</div></li>
+		                    <li id="rent-type" class="text-right"><div class="rent_type">◊™◊‚</div></li>
+		                </ul>
+		            </div>
+		            <div class="state">
+	                <ul class="state-info">
+	                    <!--∑ø‘¥◊¥Ã¨√Ë ˆ-->
+	                    <li>
+	                        <!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+	                        <span id="watcher"><span class="house_rent_id">C45</span></span>
+	                    </li>
+	                    <li class="text-center">
+	                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+	                        <span id="want"><span class="want">0</span></span>
+	                    </li>
+	                    <li id="price" class="text-right"><div class="price">500~1k</div></li>
+	                </ul>
+            		</div>
+        		</div>
+					</a>
+					<hr>
+        </div><a href="javascript:;" class="get_more" style="color: rgb(0, 123, 196); text-decoration: none; outline: none; display: block;">::more::</a>
+  	<div class="more_loader_spinner" style="display: none;"></div></div> 
+    
+    
 
 
 </div>
 
 <footer>
-    <!--Â∫ïÈÉ®ÂØºËà™Ê†è-->
+    <!--µ◊≤øµº∫Ω¿∏-->
     <div class="nav-btn fo-nav">
-        <!--Âá∫ÁßüÈ°µÈù¢,ÂΩìÂâçÈ°µÈù¢(Â∑≤ÊøÄÊ¥ª)-->
+        <!--≥ˆ◊‚“≥√Ê,µ±«∞“≥√Ê(“—º§ªÓ)-->
         <a href="#" class="active">
             <i class="fa fa-home fa-2x  " aria-hidden="true"></i>
-            <div class="label">Âá∫Áßü</div>
+            <div class="label">≥ˆ◊‚</div>
         </a>
     </div>
     <div class="nav-btn fo-nav">
         <a href="pages/houseSeek.html" class="">
             <i class="fa fa-search-plus fa-2x  " aria-hidden="true"></i>
-            <div class="label">Ê±ÇÁßü</div>
+            <div class="label">«Û◊‚</div>
         </a>
     </div>
     <!--<div class="nav-btn fo-nav">-->
-    <!--<a href="pages/my_info.html" class="">-->
-    <!--<i class="fa fa-user-circle fa-2x  " aria-hidden="true"></i>-->
-    <!--<div class="label">ÊàëÁöÑ</div>-->
-    <!--</a>-->
+        <!--<a href="pages/my_info.html" class="">-->
+            <!--<i class="fa fa-user-circle fa-2x  " aria-hidden="true"></i>-->
+            <!--<div class="label">Œ“µƒ</div>-->
+        <!--</a>-->
     <!--</div>-->
     <!--<div class="nav-btn fo-nav">-->
-    <!--<a href="pages/verity_info.html" class="">-->
-    <!--<i class="fa fa-key fa-2x  " aria-hidden="true"></i>-->
-    <!--<div class="label">È™åËØÅ</div>-->
-    <!--</a>-->
+        <!--<a href="pages/verity_info.html" class="">-->
+            <!--<i class="fa fa-key fa-2x  " aria-hidden="true"></i>-->
+            <!--<div class="label">—È÷§</div>-->
+        <!--</a>-->
     <!--</div>-->
 
 
 </footer>
-</body>
-</html>
+
+</body></html>
