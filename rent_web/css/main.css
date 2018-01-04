@@ -102,7 +102,7 @@ div .content-box{
     overflow: hidden;
     color:black;
     width:100%;
-    padding:20px 0;
+    padding:20px 0 17px 0;
 }
 
 .first-content-box.content-box{
@@ -129,7 +129,7 @@ div .content-box{
     color: red;
 }
 .abstract,.state{
-    padding:3% 0;
+    /* padding:3% 0; */
 }
 .abstract ul li,.state ul li{
     width: 30%;
