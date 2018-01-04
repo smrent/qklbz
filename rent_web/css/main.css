@@ -96,13 +96,13 @@ footer{
 /*-----------------------body--------------------------*/
 .body{
     width: 98%;
-    margin: 21% 0 18% 2%;
+    margin: 15% 0 18% 2%;
 }
 div .content-box{
     overflow: hidden;
     color:black;
     width:100%;
-    padding:15px 0;
+    padding:20px 0;
 }
 
 .first-content-box.content-box{
@@ -129,7 +129,7 @@ div .content-box{
     color: red;
 }
 .abstract,.state{
-    padding:2% 0;
+    padding:3% 0;
 }
 .abstract ul li,.state ul li{
     width: 30%;

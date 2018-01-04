@@ -29,12 +29,10 @@ div.content-box{
     width:68%;
     position: absolute;
     right:0;
-    bottom: 15px;
+    bottom: 20px;
     text-align: center;
 }
-a.content-box{
-    padding: 0 0 15px 0;
-}
+
 .bottom-abstract ul li{
     width: 30%;
 }
@@ -49,4 +47,8 @@ a.content-box{
 }
 .non-valid{
     color:#f34646;
+}
+a.content-box.positon-relative {
+    padding: 0 0 20px 0;
+    margin: 0;
 }
