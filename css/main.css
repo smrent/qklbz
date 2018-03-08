@@ -29,6 +29,13 @@ body {
     margin: 1em 0;
 }
 
+/*jrtt*/
+.toutiao {margin-bottom:5px;}
+.toutiao ul {list-style-type:none;padding:0;width:100%;margin:0 auto;overflow:hidden}
+.toutiao ul li{float:left;width:100%;height:40px;line-height:40px;text-align:left;overflow:hidden;border-bottom:1px solid #DDD; list-style:none;}
+.toutiao ul li a{text-decoration:none;color:#000000;display:inline-block;width:100%;height:100%;}
+/*jrtt end*/
+
 .mingzhan {
     margin-bottom: 5px;
 }
