@@ -1,0 +1,324 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>水木租房子-求租搜索结果</title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/main.css" rel="stylesheet">
+		 <link href="../css/houseSeek_main.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/rentout_search.css">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.more.seekhouse_search.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			var keyword=$(" input[ name='keyword_post' ] ").val();
+			var num_contact=$(" input[ name='num_contact' ] ").val();
+			
+			if(keyword!=""){//按关键字搜索
+				//alert("rent_type为空");
+				if(num_contact == 0){//关键字搜索，没有搜到结果 && rent_type ==""
+					var innerHTML="<a class='content-box positon-relative'>没有找到该关键字对应的求租</a><br>您可以返回重新搜索";
+					document.getElementById('more').innerHTML=innerHTML; 
+				}else{
+					$('#more').more({'address': '../php/data_search.php?keyword='+keyword})
+				}
+			}
+			//var address_php='../php/data_user_rent.php?w_or_m='+w_or_m+'&contact='+contact+'&house_rent_id='+user_house_rent_id+'&user_want='+user_want;
+			//alert(address_php);
+			//$('#more').more({'address': '../php/data_rentout_search.php?keyword='+keyword+'&rent_type='+rent_type+'&district='+district+'&subway='+subway+'&room_type='+room_type})
+			//alert('111');
+		});
+		//返回之前浏览位置
+		 $(function () {
+        var str = window.location.href;
+        str = str.substring(str.lastIndexOf("/") + 1);
+        if ($.cookie(str)) {
+            $("html,body").animate({ scrollTop: $.cookie(str) }, 1000);
+        }else {
+        }
+    })
+    
+    $(window).scroll(function () {
+        var str = window.location.href;
+        str = str.substring(str.lastIndexOf("/") + 1);
+        var top = $(document).scrollTop();
+        $.cookie(str, top, { path: '/' });
+        return $.cookie(str);
+    })
+		</script>
+</head>
+<body style="">
+
+<header>
+    <div class="nav-btn nav-return">
+			    	<a href="../tools/search.html">
+            <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+            <div class="return">返回</div>
+        </a>
+    </div>
+    <div class="phone-info">
+    <span>关键字搜索:</span><span style="color:red;">kifyt</span>	  </div>
+</header>
+<br>
+<div class=" body">
+    <!--租房信息-->
+    <div id="more">
+        <div style="display: none;"><div class="single_item"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<input type="hidden" value="kifyt" name="keyword_post">					
+
+
+					<input type="hidden" value="3" name="num_contact">
+					
+				
+					<a class="content-box positon-relative" href="houseSeek_info.php?house_seek_id=37&amp;from=seekhouse_search&amp;keyword_get=undefined&amp;rent_type_get=undefined&amp;district_get=undefined&amp;subway_get=undefined&amp;room_type_get=undefined">
+					<!--<a class="content-box">-->
+						<!--房间属性简介_水平排列-->
+            <div class="abstract">
+                <ul class="room-info">
+                	
+                    <!--
+                    <li id="district">
+                        <span class="district"></span>
+                    </li>
+                    <li id="house-type" class="text-center">
+                        <span class="room_type"></span>
+                    </li>
+                    <li id="rent-type" class="text-right">
+                        <span class="rent_type"></span>
+                    </li>
+                    <li class="price">
+                        <span><div class="xueye"></div></span>
+                    </li>
+                    -->
+                </ul>
+            </div>
+						<!--房间图片 float-->
+						<!--
+		        <div class="pic-wrapper float-left">
+		            <img class="room-pic" alt="">
+		        </div>
+		        -->
+		    <div class="pic-wrapper-float" style="background-image: url(&quot;../images/house_img/kifyt.jpg&quot;);"></div>
+		        <!--房源描述 float-->
+           <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：kifyt</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">56766687888…</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow">14</div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3小时前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+					<!--</a>-->
+					</a>
+					<hr>
+        </div></div>
+        <div class="single_item" id="more_element_1"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<input type="hidden" value="kifyt" name="keyword_post">					
+
+
+					<input type="hidden" value="3" name="num_contact">
+					
+				
+					<a class="content-box positon-relative" href="houseSeek_info.php?house_seek_id=39&amp;from=seekhouse_search&amp;keyword_get=undefined&amp;rent_type_get=undefined&amp;district_get=undefined&amp;subway_get=undefined&amp;room_type_get=undefined">
+					<!--<a class="content-box">-->
+						<!--房间属性简介_水平排列-->
+            <div class="abstract">
+                <ul class="room-info">
+                	
+                    <!--
+                    <li id="district">
+                        <span class="district"></span>
+                    </li>
+                    <li id="house-type" class="text-center">
+                        <span class="room_type"></span>
+                    </li>
+                    <li id="rent-type" class="text-right">
+                        <span class="rent_type"></span>
+                    </li>
+                    <li class="price">
+                        <span><div class="xueye"></div></span>
+                    </li>
+                    -->
+                </ul>
+            </div>
+						<!--房间图片 float-->
+						<!--
+		        <div class="pic-wrapper float-left">
+		            <img class="room-pic" alt="">
+		        </div>
+		        -->
+		    <div class="pic-wrapper-float" style="background-image: url(&quot;../images/house_img/kifyt.jpg&quot;);"></div>
+		        <!--房源描述 float-->
+           <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：kifyt</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">immutab你好immutab你好immutab你好immutab你好immutab你好immutab你好…</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow">14</div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">2小时前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+					<!--</a>-->
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_2"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<input type="hidden" value="kifyt" name="keyword_post">					
+
+
+					<input type="hidden" value="3" name="num_contact">
+					
+				
+					<a class="content-box positon-relative" href="houseSeek_info.php?house_seek_id=38&amp;from=seekhouse_search&amp;keyword_get=undefined&amp;rent_type_get=undefined&amp;district_get=undefined&amp;subway_get=undefined&amp;room_type_get=undefined">
+					<!--<a class="content-box">-->
+						<!--房间属性简介_水平排列-->
+            <div class="abstract">
+                <ul class="room-info">
+                	
+                    <!--
+                    <li id="district">
+                        <span class="district"></span>
+                    </li>
+                    <li id="house-type" class="text-center">
+                        <span class="room_type"></span>
+                    </li>
+                    <li id="rent-type" class="text-right">
+                        <span class="rent_type"></span>
+                    </li>
+                    <li class="price">
+                        <span><div class="xueye"></div></span>
+                    </li>
+                    -->
+                </ul>
+            </div>
+						<!--房间图片 float-->
+						<!--
+		        <div class="pic-wrapper float-left">
+		            <img class="room-pic" alt="">
+		        </div>
+		        -->
+		    <div class="pic-wrapper-float" style="background-image: url(&quot;../images/house_img/kifyt.jpg&quot;);"></div>
+		        <!--房源描述 float-->
+           <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：kifyt</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">发布出租需求，而且很快就帮忙发布了，我的帖子的浏览量很快超过100，这对于我的求租是有很大帮助的，再次感谢帅哥么么哒…</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow">14</div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3小时前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+					<!--</a>-->
+					</a>
+					<hr>
+        </div><div class="single_item" id="more_element_3"><!--onclick="alert(this.innerHTML);"-->
+					<!--<a href="pages/rent_info.html" class="content-box">-->
+					<input type="hidden" value="kifyt" name="keyword_post">					
+
+
+					<input type="hidden" value="3" name="num_contact">
+					
+				
+					<a class="content-box positon-relative" href="houseSeek_info.php?house_seek_id=37&amp;from=seekhouse_search&amp;keyword_get=undefined&amp;rent_type_get=undefined&amp;district_get=undefined&amp;subway_get=undefined&amp;room_type_get=undefined">
+					<!--<a class="content-box">-->
+						<!--房间属性简介_水平排列-->
+            <div class="abstract">
+                <ul class="room-info">
+                	
+                    <!--
+                    <li id="district">
+                        <span class="district"></span>
+                    </li>
+                    <li id="house-type" class="text-center">
+                        <span class="room_type"></span>
+                    </li>
+                    <li id="rent-type" class="text-right">
+                        <span class="rent_type"></span>
+                    </li>
+                    <li class="price">
+                        <span><div class="xueye"></div></span>
+                    </li>
+                    -->
+                </ul>
+            </div>
+						<!--房间图片 float-->
+						<!--
+		        <div class="pic-wrapper float-left">
+		            <img class="room-pic" alt="">
+		        </div>
+		        -->
+		    <div class="pic-wrapper-float" style="background-image: url(&quot;../images/house_img/kifyt.jpg&quot;);"></div>
+		        <!--房源描述 float-->
+           <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：kifyt</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">56766687888…</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow">14</div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3小时前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+					<!--</a>-->
+					</a>
+					<hr>
+        </div>
+  	<div class="more_loader_spinner" style="display: none;"></div></div> 
+    
+    
+
+
+</div>
+
+</body></html>

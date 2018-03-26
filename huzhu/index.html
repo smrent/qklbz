@@ -1,0 +1,827 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>区块链帮助-互助连萌-qklbz.com</title>
+    <meta name="author" content="qklbz.com">
+		<meta name="Copyright" content="qklbz.com">
+		<meta name="Keywords" content="区块链帮助-互助连萌-qklbz.com">   
+		<meta name="Description" content="区块链帮助-互助连萌-qklbz.com">   
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/houseSeek_main.css" rel="stylesheet">
+		<!--move jquery.min.js to here and add jquery.more.js-->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.more.houseSeek.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$('#more').more({'address': 'php/houseSeek.php'})
+			//alert('111');
+		});
+		//返回之前浏览位置
+		 $(function () {
+        var str = window.location.href;
+        str = str.substring(str.lastIndexOf("/") + 1);
+        if ($.cookie(str)) {
+            $("html,body").animate({ scrollTop: $.cookie(str) }, 1000);
+        }else {
+        }
+    })
+    
+    $(window).scroll(function () {
+        var str = window.location.href;
+        str = str.substring(str.lastIndexOf("/") + 1);
+        var top = $(document).scrollTop();
+        $.cookie(str, top, { path: '/' });
+        return $.cookie(str);
+    })
+		</script>
+</head>
+<body style="">
+
+<header>
+    <!--搜索链接跳转-->
+    <div class="nav-btn nav-search">
+        <a href="tools/search.html">
+            <i class="fa fa-search fa-2x text-primary " aria-hidden="true"></i>
+        </a>
+    </div>
+    <!--LOGO-->
+    <div class="nav-btn nav-logo">
+        <img class="logo" src="images/logo.jpg" alt="水木租房">
+    </div>
+    <!--发布信息跳转-->
+    <div class="nav-btn nav-publish">
+        <a href="tools/publish.html"><i class="fa fa-plus-circle fa-2x text-success " aria-hidden="true"></i>
+        </a>
+    </div>
+</header>
+
+<div class=" body">
+    <!--求租信息-->
+    <div id="more">
+        <div style="display: none;"><div class="single_item"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=20&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/2.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：137108770</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">求租房子，地点要求是地铁附近，到地铁时间步行不超过10分钟，房间要求大点，房租可面议，可加微信137108770，本人极好相处，爱干净爱卫生，希望找一个稳定居住的环境，因为搬家太痛苦了！</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">2个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div></div>
+			  <div class="single_item" id="more_element_1"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=19&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/2.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title"><i class="fa fa-arrow-up" aria-hidden="true" style="color:red;"></i><span>感谢：yangtree</span></div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">地铁太阳宫附近，主卧或次卧。</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">2个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_2"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=39&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/house_img/kifyt.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：kifyt</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">immutab你好immutab你好immutab你好immutab你好immutab你好immutab你好</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow">14</div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">2小时前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_3"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=38&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/house_img/kifyt.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：kifyt</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">发布出租需求，而且很快就帮忙发布了，我的帖子的浏览量很快超过100，这对于我的求租是有很大帮助的，再次感谢帅哥么么哒</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow">14</div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">2小时前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_4"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=37&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/house_img/kifyt.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：kifyt</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">56766687888</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow">14</div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3小时前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_5"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=36&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/9.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：Kevin_Intimate</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">求租清河北京信息科技大学或者永泰庄地铁站附近一居室。整租。</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">2星期前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_6"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=35&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/9.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：15010076354</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">
+
+*求租地点:通惠家园惠民园或惠生园的房子
+正规一居或两居，一家人整租
+</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3星期前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_7"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=34&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/10.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：rosemary666666</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">本人找合租，回龙观或霍营地铁站附近的房子，希望室友全是女生，3月中旬入住。</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3星期前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_8"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=33&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/6.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：15801677310</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">本人女，在使馆区工作，求租附近周边6公里范围左右的单间，比如，金台路，甜水园，酒仙桥附近区域，房租最好低于2500元／月，长租，有合适的房源请电话联系15801677310许艳芹，谢谢！</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3星期前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_9"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=32&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/8.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：mambafeng</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">三位女生求租一套三居室，离地铁站不要太远，租客都是白领，干净整洁，忘各位有房者联系我，感激不尽</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3星期前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_10"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=31&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/1.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：15811136737</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">东南向两居室 干净 不做饭  北苑桥附近 靠近红军营南路也可，家具齐</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3星期前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_11"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=30&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/7.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：mercurypipi</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">求租，地铁10号线牡丹园附近（或者10号线沿线，北三环四环沿线），小次卧。一人住，女，爱干净，会做饭，会做糕点，所以合租你会经常有点心吃，4月中旬入住。如果小伙伴儿也有类似的需求，也可以一起找房子合租。</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">3星期前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_12"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=29&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/7.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：DeMeng1002</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">本人男，求合租菜市口附近房子，麻烦有房源的房东尽快跟我联系</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">1个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_13"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=28&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/11.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：mjs-2599</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">求租 女 1500以内 亦庄次卧单间 3月10号左右能入住的  干净安全无中介费 
+经开大厦上班 鹿海园 泰河园 南海家园或附近房源都可以呀 
+或者有附近的姑娘 可以一起合租啊</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">1个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_14"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=26&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/4.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：872490999</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">要求女孩</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">1个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_15"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=25&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/1.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：chm725812080967</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">帮一个男生朋友，找为期一个月的短租房子。时间2月上旬到3月初，价格2000以下，范围无要求，有没有哪位小伙伴房子暂时闲置的呢？有的话麻烦私聊我，或添加微信chm725812080967</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">1个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_16"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=24&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/5.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：15652621432</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">北京哪里有1500的单居室，年后需要微信15652621432。</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">1个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_17"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=23&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/2.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：954038881</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">求租!本人男，在地铁五道口附近上班，求租地铁13号线，15号线沿途房子，预算1500左右，年后2月底入住!请加微信或QQ:954038881。求租求租! &#8203;</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">1个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_18"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=22&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/9.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：cocodee</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">求租朝阳太阳宫 芍药居附近单间，一个男生，互联网行业，在太阳宫上班</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">1个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_19"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=21&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/9.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：Endless-Spring</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">1、交通便利，尽量离立水桥地铁近
+2、房子装修时间较长，甲醛不超标，家电齐全
+    3、要和房东签合同
+    4、手续齐全（房产证、身份证复印件）
+    5、可看房时间：1月28日之前 或2月22日以后
+    预计租3个月（2018年2月26日--2018年5月26日</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">2个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><div class="single_item" id="more_element_20"><!--onclick="alert(this.innerHTML);"-->
+			    <a class="content-box" href="houseSeek_info.php?house_seek_id=20&amp;from=houseSeek">
+			        <!--求租者图片 float-->
+			        <!--
+			        <div class="pic-wrapper float-left">
+			            <img class="headimg" alt="XXX">
+			        </div>
+			        -->
+			        <!--求租者图片 float-->
+			        <div class="pic-wrapper-float" style="background-image: url(&quot;images/head_img/2.jpg&quot;);"></div>
+			        <!--求租标题 float-->
+			        <div class="content-wrapper float-left">
+			            <h4><div class="title">感谢：137108770</div></h4>
+			            <!--房间属性简介 block 垂直排列-->
+						<div class="content">求租房子，地点要求是地铁附近，到地铁时间步行不超过10分钟，房间要求大点，房租可面议，可加微信137108770，本人极好相处，爱干净爱卫生，希望找一个稳定居住的环境，因为搬家太痛苦了！</div>
+			            <div class="state">
+			                <ul class="state-info">
+			                    <!--关注人数-->
+			                    <li>
+			                        <i class="fa fa-heart" aria-hidden="true"></i>
+			                        <span><div class="follow"></div></span>
+			                    </li>
+			                  
+			                    <li class="text-right"><span class="passtime">2个月前</span></li>
+			                    <!--
+			                    <li>
+			                        <span class="house_seek_id">
+			                    </li>
+			                    -->
+			                </ul>
+			            </div>
+			        </div>
+			    </a>
+			    <hr>
+			  </div><a href="javascript:;" class="get_more" style="color: rgb(0, 123, 196); text-decoration: none; outline: none; display: block;">::more::</a>
+		<div class="more_loader_spinner" style="display: none;"></div></div>
+
+</div>
+
+<footer>
+    <!--底部导航栏-->
+    <div class="nav-btn fo-nav">
+        <!--出租页面,当前页面(已激活)-->
+        <a href="#" class="active">
+            <i class="fa fa-home fa-2x  " aria-hidden="true"></i>
+            <div class="label">感谢连萌</div>
+        </a>
+    </div>
+    <div class="nav-btn fo-nav">
+        <a href="https://m.weibo.cn/p/100808ad85accd01a23763b66bffa54932c5ff" class="">
+            <i class="fa fa-search-plus fa-2x  " aria-hidden="true"></i>
+            <div class="label">帮扩连萌</div>
+        </a>
+    </div>
+    <!--
+    <div class="nav-btn fo-nav">
+        <a href="my_info.html" class="">
+            <i class="fa fa-user-circle fa-2x  " aria-hidden="true"></i>
+            <div class="label">我的</div>
+        </a>
+    </div>
+    <div class="nav-btn fo-nav">
+        <a href="verity_info.html" class="">
+            <i class="fa fa-key fa-2x  " aria-hidden="true"></i>
+            <div class="label">验证</div>
+        </a>
+    </div>
+    -->
+
+</footer>
+
+</body></html>

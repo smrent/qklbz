@@ -1,0 +1,140 @@
+﻿<?php
+//发布出租php
+echo '<pre>';
+print_r($_POST);
+print_r($_FILES);
+echo '</pre>';
+//$ip=getRealIp();//获取当前IP
+//echo $ip;
+exit;
+error_reporting(E_ALL & ~E_NOTICE);
+date_default_timezone_set(PRC);  
+$mysqli = new mysqli('localhost', 'root', '674jdEddCF', 'demo');
+$mysqli = new mysqli('localhost', 'root', 'root', 'demo');
+
+$mysqli->query("SET NAMES utf8");
+
+$rent_type=$_POST['rent_type'];
+$district=$_POST['district'];
+$subway=$_POST['subway'];
+$room_type=$_POST['room_type'];
+$price=$_POST['price'];
+$w_or_m=$_POST['w_or_m'];
+$contact=$_POST['contact'];
+$about=$_POST['about'];
+$zuidi=$_POST['zuidi'];
+if($zuidi == ""){
+	$zuidi="未承诺";
+}else if($zuidi == "全网最低"){
+	$zuidi="已承诺";
+}
+
+$content=$about;
+$title=mb_substr($about,0,26,'utf-8');
+
+$time=time(); //获取当前时间
+$ip=getRealIp();//获取当前IP
+//信息为空的post过来了
+if ($rent_type == "" || $district == "" || $subway == "" || $room_type == "" || $price == "" || $w_or_m == "" || $contact == "" || $about == ""){//$rs为true才去取
+	echo "<script>alert('内容不完整，请重新发布');window.location.href='../pages/search_and_publish/rentout_publish.html';</script>";
+	exit;
+}
+
+//ip被封禁
+$rs=$mysqli->query("SELECT * FROM `forbid_ip` WHERE ip = '$ip'");
+if ($rs){//$rs为true才去取
+	$numrows_ip_forbid=mysqli_num_rows($rs);
+	if($numrows_ip_forbid > 0){
+		echo "<script>alert('IP被封禁，请联系公众号水木租房');window.history.go(-1);</script>";
+		exit;
+  }
+}
+//联系方式被封禁
+$rs=$mysqli->query("SELECT * FROM `forbid_contact` WHERE contact = '$contact'");
+if ($rs){//$rs为true才去取
+	$numrows_contact_forbid=mysqli_num_rows($rs);
+	if($numrows_contact_forbid > 0){
+		echo "<script>alert('联系方式被封禁，请联系公众号水木租房');window.history.go(-1);</script>";
+		exit;
+  }
+}
+//内容重复
+$rs=$mysqli->query("SELECT * FROM `house_rent` WHERE content = '$content'");
+if ($rs){//$rs为true才去取
+	$numrows_content=mysqli_num_rows($rs);
+	if($numrows_content > 0){
+		echo "<script>alert('内容已经发布过了');window.history.go(-1);</script>";
+		exit;
+  }
+}
+//联系方式重复
+$rs=$mysqli->query("SELECT * FROM `house_rent` WHERE contact = '$contact'");
+if ($rs){//$rs为true才去取
+	$numrows_contact=mysqli_num_rows($rs);
+	if($numrows_contact > 0){
+		echo "<script>alert('联系方式已经发布过了');window.history.go(-1);</script>";
+		exit;
+  }
+}
+//判断该ip是否之前发过求租，如果发布过，更新之前的内容
+$rs=$mysqli->query("SELECT * FROM `house_rent` WHERE ip = '$ip' and is_show = 1 ORDER BY addtime DESC LIMIT 0, 1");
+//$rs=$mysqli->query("SELECT * FROM `house_rent` WHERE ip = '$ip' LIMIT 0, 1");
+if ($rs){//$rs为true才去取
+	$numrows_ip_house_rent=mysqli_num_rows($rs);
+	//echo "<script>alert('$numrows_ip_house_rent');</script>";
+}
+if($numrows_ip_house_rent > 0){//该IP发布过出租
+	$row=$rs->fetch_assoc();
+	$set_top=$row['set_top'];
+	if($set_top == 1){
+		echo "<script>alert('置顶推荐请联系管理员更新');window.history.go(-1);</script>";
+		exit;
+  }else{
+  	$house_rent_id=$row['id'];//发布过的出租的id
+		//echo "<script>alert('$house_rent_id');</script>";
+		//$sql="UPDATE house_rent SET w_or_m = '$w_or_m', contact = '$contact', zuidi = '$zuidi', district = '$district', rent_type = '$rent_type', room_type = '$room_type', price = '$price', subway = '$subway', title = '$title', content = '$content', addtime = '$time' WHERE id = '$house_rent_id'";
+		//更新内容，不更新时间，防止频繁刷帖子，想到上面了，就去验证
+		$sql="UPDATE house_rent SET w_or_m = '$w_or_m', contact = '$contact', zuidi = '$zuidi', district = '$district', rent_type = '$rent_type', room_type = '$room_type', price = '$price', subway = '$subway', title = '$title', content = '$content' WHERE id = '$house_rent_id'";
+		if($result = $mysqli->query($sql)){
+		    echo "<script>alert('出租发布成功！您原来发布的内容已更新');location.href = '../pages/rent_info.php?house_rent_id=$house_rent_id'</script>";
+		}else{
+		    echo "<script>alert('发布失败！请重新发布或联系公众号水木租房！');window.history.go(-1);</script>";
+		}
+ }
+}else{//该IP未发布过出租
+	$rs0=$mysqli->query("select max(ID) from `house_rent`");
+	$row0=$rs0->fetch_assoc();
+	$maxid=$row0['max(ID)'];
+	$maxid++;
+	//echo "<script>alert('$maxid')</script>";
+	//exit;
+	//该IP没发布过出租
+	$sql="INSERT INTO house_rent (id,ip,w_or_m,contact,zuidi,district,rent_type,room_type,price,subway,title,content,addtime) VALUES ($maxid,'$ip','$w_or_m','$contact','$zuidi','$district','$rent_type','$room_type','$price','$subway','$title','$content','$time')";
+	if($result = $mysqli->query($sql)){
+	    echo "<script>alert('出租发布成功！快去分享吧！');location.href = '../pages/rent_info.php?house_rent_id=$maxid'</script>";
+	}else{
+	    echo "<script>alert('出租发布失败！请重新发布或联系公众号水木租房！');window.history.go(-1);</script>";
+	}
+}
+	
+function getRealIp(){
+    $ip=false;
+    if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+        $ip = $_SERVER["HTTP_CLIENT_IP"];
+    }
+    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+        if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
+        for ($i = 0; $i < count($ips); $i++) {
+            if (!eregi ("^(10│172.16│192.168).", $ips[$i])) {
+                $ip = $ips[$i];
+                break;
+            }
+        }
+    }
+    return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+}
+//echo getRealIp();
+
+exit;
+?>

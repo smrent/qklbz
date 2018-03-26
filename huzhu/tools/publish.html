@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>发布感谢-互助连萌-区块链帮助-qklbz.com</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/search.main.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+    	function Check_Publish(){//验证格式
+    		var contact=$(" input[ name='contact' ] ").val();
+    		var about=$(" textarea[ name='about' ] ").val();
+    		//alert(about);
+    		//联系方式
+    		if(contact==""){//联系方式为空
+			 			alert ("请输入感谢对象");
+			   		document.form.contact.focus();
+			   		return false;
+    		}else if(about==""){
+    				alert ("请输入感谢留言");
+			   		document.form.about.focus();
+			   		return false;
+    		}
+    	}
+		function countChar(){<!--字数统计-->
+			var curLength = document.getElementById("about").value.length;
+				if (curLength>140){
+					alert("超过字数限制，多出的字将被截断！" );
+					document.getElementById("about").value = document.getElementById("about").value.substr(0,140);
+					curLength = 140;
+				}
+			document.getElementById("counter").innerHTML = 140 - document.getElementById("about").value.length;
+		};
+		/*
+		function $(m){
+			 return document.getElementById(m);
+		}*/
+		function xiangying(){
+		  if(/msie/i.test(navigator.userAgent)){
+			  document.getElementById("about").onpropertychange = countChar;
+			 } else {
+			  document.getElementById("about").addEventListener("input",countChar,false);
+			 }
+		}
+	    window.onload = xiangying;
+    </script>
+</head>
+<body>
+<header>
+    <!--搜索链接跳转-->
+    <div class="nav-btn nav-return">
+        <!--返回需要跳转的页面暂时没写-->
+        <a href="../index.php">
+            <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+            <!--<div class="return">返回</div>-->
+        </a>
+
+    </div>
+    <h2>发布感谢</h2>
+    <!--
+    <div class="nav-btn nav-change">
+        <a href="seekhouse_publish.html" >发布感谢</a>
+    </div>
+    -->
+</header>
+<div class="body rent_bgcolor">
+    <div class="select-type">
+        <form name="form" id="form" action="../php/publish.php" method="post" onsubmit="return Check_Publish();">
+            <fieldset class="form-middle">
+				<div class="line-box">
+                    <label for="district">感谢<a style="color:red;">*</a></label>
+                    <input type="text" class="associate" name="contact" id="contact" maxlength="20">
+                </div>
+            </fieldset>
+            <fieldset class="form-middle">
+					<div class="line-box">
+                    <label class="big" for="about">帮助我<a style="color:red;">*</a></label>
+                    <!--<textarea name="about" id="about" cols="30" rows="10" placeholder="亲，房源信息描述完整清晰更好租哦！"></textarea>-->
+										还可以输入<span id="counter">140</span>字<br/><!--字数统计结束&nbsp;&nbsp;--> 
+	   								<textarea style="overflow-y:hidden;overflow-x:hidden" class="wenben" cols="30" rows="10" name="about" id="about" maxlength="140" onkeydown='countChar();' onkeyup='countChar();'></textarea>
+        		    </div>
+            </fieldset>
+            <fieldset class="form-bottom">
+                <input class="rentout" type="submit" value="发布">
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
+</html>

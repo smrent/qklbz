@@ -1,0 +1,71 @@
+/*star*/
+div.star{
+    display: inline-block;
+    margin: 0;
+    padding:0;
+}
+.star-box {
+    float: left;
+}
+.info-box p{
+    color:#CCCCCC;
+}
+.info-box{
+    text-align: center;
+    width:60%;
+    margin:auto;
+    float:left;
+
+}
+.alert-box p{
+    font-size: 10px;
+    color:#ccc;
+}
+.form-item{
+    width:100%;
+}
+.form-item select,.form-item input{
+    width:67%;
+    color:#999;
+}
+.info-form label{
+    vertical-align: top;
+}
+.info-form{
+    float: left;
+    width:60%;
+}
+.info-form input,.info-form textarea{
+    width:66%;
+}
+.info-form textarea{
+    margin-top: 2px;
+    border-width: 2px;
+}
+.shortcut-btn{
+    float: left;
+    width:50%;
+    text-align: center;
+}
+.shortcut-btn a{
+    padding:10px;
+}
+.body{
+    overflow: hidden;
+}
+input.btn {
+    margin:1em 1em 0 1em ;
+    width:30%;
+    height:2em;
+    border-radius: 5px 5px ;
+}
+.btn-reset{
+    background-color: #929292;
+    border:gray;
+    color: white;
+}
+.btn-submit{
+    color: white;
+    border: 1px solid darkblue;
+    background-color: #3f98ff;
+}

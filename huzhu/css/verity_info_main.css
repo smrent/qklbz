@@ -1,0 +1,64 @@
+.info{
+    font-size: 12px;
+    color: #ccc;
+    text-align: center;
+    margin: 10px 0;
+}
+label,input{
+   display: inline-block;
+}
+
+.alert{
+    margin:20px 0;
+    width:100%;
+    text-align: center;
+}
+.alert img{
+    width:60%;
+}
+.alert-box p{
+    font-size: 14px;
+}
+.alert-box{
+    padding-left:3%;
+}
+.alert-box p:nth-child(1):before{
+    content: '1、';
+}
+.alert-box p:nth-child(2):before{
+    content: '2、';
+}
+.alert-box p:nth-child(3):before{
+    content: '3、';
+}
+.alert-box p:nth-child(4):before{
+    content: '4、';
+}
+.alert-box p:nth-child(6){
+    text-indent: 1.5em;
+}
+.alert-box p:nth-child(5){
+    text-indent: 1.5em;
+}
+a.blog-link{
+    display: inline;
+}
+.btn-primary{
+    color:white;
+    background-color: #3f98ff;
+    border-radius: 5px 5px ;
+    padding:4px 8px ;
+}
+.phone-number{
+
+    padding:4px;
+}
+.wrapper{
+    text-align: center;
+}
+.roomer-info .pic-wrapper{
+    float: none;
+}
+.roomer-info {
+    text-align: center;
+}

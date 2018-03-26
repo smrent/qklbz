@@ -1,0 +1,41 @@
+.verify{
+    color:#2991f7;
+    border:1px solid #2991f7;
+    border-radius: 3px 3px ;
+    display: inline-block;
+    padding:2px;
+}
+.none-verify{
+    color: #f74848;
+    display: inline-block;
+    padding:2px;
+}
+div.pic-wrapper {
+    text-align: center;
+}
+.fa-heart{
+    color:red;
+}
+.content-box-houseSeek{
+    min-height:128px;
+    width:100%
+}
+
+/*James add for infinite loading*/
+#district{
+    color:#3f98ff;
+}
+
+#more{margin:0px auto;}/*border: 1px solid #999;*/
+.get_more{margin:10px; text-align:center}
+.more_loader_spinner{width:20px; height:20px; margin:10px auto; background: url(../images/loader.gif) no-repeat;}
+.room_type{
+     display: inline-block;
+}
+.area{
+    display: inline-block;
+}
+.follow{
+    display: inline;
+}
+
